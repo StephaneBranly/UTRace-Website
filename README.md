@@ -1,7 +1,8 @@
 # UTRace-Website
 
 ![Delimiteur](https://zupimages.net/up/19/39/gwom.png)
-![Logo](https://zupimages.net/up/19/48/7wsd.png)
+
+<div style="text-align:center"><img src="https://zupimages.net/up/19/48/7wsd.png" /></div>
 
 ## What is UT'Race
 
@@ -11,4 +12,4 @@ UT'Race is an association of the Université of Technology of Compiègne. The go
 
 [MIT Licence](https://choosealicense.com/licenses/mit)
 
-![Delimiteur]
+![Delimiteur](https://zupimages.net/up/19/39/gwom.png)
