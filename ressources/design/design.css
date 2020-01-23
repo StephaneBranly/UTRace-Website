@@ -40,6 +40,11 @@
 .icon-star-half-alt {
   color: yellow;
 }
+.icon-star:hover,
+.icon-star-empty:hover,
+.icon-star-half-alt:hover {
+  cursor: pointer;
+}
 /* GENERAL */
 body {
   margin: 0;
@@ -124,7 +129,12 @@ header li a:hover {
   color: #fff;
   background-color: #000;
 }
-
+.live {
+  color: red;
+}
+.live:hover {
+  color: red;
+}
 footer div {
   padding: 15px;
   margin: 30px;
@@ -265,6 +275,6 @@ button:hover {
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
   cursor: pointer;
 }
-button .icone {
+.icone_margin {
   margin-right: 10px;
 }

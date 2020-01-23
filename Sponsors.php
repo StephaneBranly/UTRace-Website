@@ -21,7 +21,9 @@
         
         <section>
             <h1 class="section_name">Pourquoi avoir des sponsors ?</h1>
-            <p>Pour réaliser notre événement, nous avons besoin d’une somme assez conséquente. Et sans l’aide de sponsors, nous ne pourrions pas atteindre cette somme. C’est pourquoi nous faisons appel à différents sponsors afin de nous aider. Il s’agit pour d’une occasion pour les sponsors de montrer leur intérêt pour une association étudiante qui a pour but de réaliser une course à la fois divertissante et à la fois axé sur la sécurité routière et domaine mécanique du fait de son village associatif.</p>
+            <p>Pour réaliser notre événement, nous avons besoin d’une somme assez conséquente. Et sans l’aide de sponsors, nous ne pourrions pas atteindre cette somme. C’est pourquoi nous faisons appel à différents sponsors afin de nous aider. Il s’agit pour d’une occasion pour les sponsors de montrer leur intérêt pour une association étudiante qui a pour but de réaliser une course à la fois divertissante et à la fois axé sur la sécurité routière et domaine mécanique du fait de son village associatif.
+                <br/><br/>Il existe de nombreuses manières de nous sponsoriser, plus d'informations sur notre dossier de sponsoring disponible dans la section <a href='#sponsoring' class='link'>nous sponsoriser</a>.
+            </p>
         </section>
 
         <section>
@@ -33,11 +35,12 @@
             <a href='' target='_blank'><img class='sponsor' src='http://2014.igem.org/wiki/images/8/8d/AMU_Team-logo_fsdie.png' alt='NOM_DU_SPONSOR/'></a>
         </section>
 
-        <section>
+        <section id='sponsoring'>
             <h1 class="section_name">Nous sponsoriser</h1> 
-            <button type='submit'><i class='icone icon-attach'>&#xe82a;</i>Télécharger le dossier de subventions</button>
+            <button type='submit'><i class='icone icon-attach icone_margin'>&#xe82a;</i>Télécharger le dossier de subventions</button>
             <form>
                 <p><label>Email : </label><br/><input type='text'/><p>
+                <p><label>Entreprise : </label><br/><input type='text'/><p>
                 <p><label>Détail sponsorisation : </label><br/><textarea></textarea><p>
                 <button type='submit'>Envoyer</button>
             </form>
