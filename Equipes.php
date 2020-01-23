@@ -23,7 +23,13 @@
             <h1 class='equipe_name'>Nom_equipe</h1>
             <img class='equipe_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image de l equipe NOM_EQUIPE'/>
             <p>Description equipe</p>
-            <div class='note'>5/5 étoiles</div>
+            <div class='note'>
+                <i class='icone icon-star'>&#xe817;</i>
+                <i class='icone icon-star'>&#xe817;</i>
+                <i class='icone icon-star'>&#xe817;</i>
+                <i class='icone icon-star'>&#xe817;</i>
+                <i class='icone icon-star-empty'>&#xe818;</i>
+            </div>
             <div class='cote'>Cote de 1.3</div>
             <div>+ voir l'équipage</div>
             <div class='equipage'>
