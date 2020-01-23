@@ -1,0 +1,3 @@
+DirectoryIndex ./Accueil.php
+RewriteEngine on
+RewriteRule ^Accueil$ Accueil.php [L] 
