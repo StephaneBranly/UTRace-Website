@@ -23,6 +23,8 @@
             <h1 class="section_name">Welcome</h1>
             <p>Bienvenue sur l'accueil de notre association ! L'événement organisé aura bientôt lieu !!!</p>
         </section>
+
+        <?php include_once("./elements/footer.php"); ?>
     </body>
 	
 </html>
