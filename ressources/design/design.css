@@ -60,6 +60,9 @@ section .section_name {
   color: #fff;
   margin: 0px;
 }
+section h2 {
+  border-bottom: 2px dashed black;
+}
 header,
 footer {
   background-image: url(../images/delimiteur.png);
@@ -180,6 +183,7 @@ footer {
   display: inline-block;
   width: 100px;
   height: 100px;
+  text-align: center;
 }
 .badge .flag {
   height: 28px;
@@ -188,8 +192,9 @@ footer {
   margin-right: 10px;
 }
 .badge .pilote_img {
-  width: 100%;
-  height: 100%;
+  height: 100px;
+  width: auto;
+  display: inline;
 }
 .badge p {
   margin: 0px;
@@ -203,4 +208,16 @@ footer {
 }
 .badge .right {
   width: 70%;
+}
+.p30p {
+  display: inline-block;
+  width: 30%;
+  margin: 1%;
+}
+
+.sponsor {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  margin: 1%;
 }
