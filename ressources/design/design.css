@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "nasalization";
+  src: url("../fonts/nasalization-rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ICONES */
 .icone {
   font-family: "fontello";
@@ -33,6 +40,11 @@
 .icon-star-half-alt {
   color: yellow;
 }
+.icon-star:hover,
+.icon-star-empty:hover,
+.icon-star-half-alt:hover {
+  cursor: pointer;
+}
 /* GENERAL */
 body {
   margin: 0;
@@ -42,7 +54,7 @@ body {
   background: -ms-radial-gradient(center, circle, #cce6ff, #4da6ff);
   background: -o-radial-gradient(center, circle, #cce6ff, #4da6ff);
   background: radial-gradient(circle at center, #cce6ff, #4da6ff);
-  font-family: "atwriter", "VCR", "Postface", Arial, sans-serif;
+  font-family: "nasalization", "atwriter", "VCR", "Postface", Arial, sans-serif;
   text-align: center;
 }
 section {
@@ -59,6 +71,20 @@ section .section_name {
   background-color: #000;
   color: #fff;
   margin: 0px;
+}
+section h2 {
+  border-bottom: 2px dashed black;
+}
+
+.link {
+  text-decoration: underline;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: yellow;
+  background-color: black;
 }
 header,
 footer {
@@ -103,7 +129,12 @@ header li a:hover {
   color: #fff;
   background-color: #000;
 }
-
+.live {
+  color: red;
+}
+.live:hover {
+  color: red;
+}
 footer div {
   padding: 15px;
   margin: 30px;
@@ -180,6 +211,7 @@ footer {
   display: inline-block;
   width: 100px;
   height: 100px;
+  text-align: center;
 }
 .badge .flag {
   height: 28px;
@@ -188,8 +220,9 @@ footer {
   margin-right: 10px;
 }
 .badge .pilote_img {
-  width: 100%;
-  height: 100%;
+  height: 100px;
+  width: auto;
+  display: inline;
 }
 .badge p {
   margin: 0px;
@@ -203,4 +236,45 @@ footer {
 }
 .badge .right {
   width: 70%;
+}
+.p30p {
+  display: inline-block;
+  width: 30%;
+  margin: 1%;
+}
+
+.sponsor {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  margin: 1%;
+}
+input,
+textarea {
+  display: inline-block;
+  min-width: 30%;
+  max-width: 30%;
+  padding: 10px;
+  margin: 1%;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+button {
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+  margin: 1%;
+  border: 0px solid rgb(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0);
+}
+button:hover {
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+.icone_margin {
+  margin-right: 10px;
 }
