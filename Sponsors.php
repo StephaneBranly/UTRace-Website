@@ -21,7 +21,7 @@
         
         <section>
             <h1 class="section_name">Pourquoi avoir des sponsors ?</h1>
-            <p>Il nous faut de l'oseille tu vois...</p>
+            <p>Pour réaliser notre événement, nous avons besoin d’une somme assez conséquente. Et sans l’aide de sponsors, nous ne pourrions pas atteindre cette somme. C’est pourquoi nous faisons appel à différents sponsors afin de nous aider. Il s’agit pour d’une occasion pour les sponsors de montrer leur intérêt pour une association étudiante qui a pour but de réaliser une course à la fois divertissante et à la fois axé sur la sécurité routière et domaine mécanique du fait de son village associatif.</p>
         </section>
 
         <section>
@@ -34,11 +34,11 @@
         </section>
 
         <section>
-            <h1 class="section_name">Nous sponsoriser</h1>
-            <p><a href=''>Télécharger notre dossier de subventions</a></p>
+            <h1 class="section_name">Nous sponsoriser</h1> 
+            <button type='submit'><i class='icone icon-attach'>&#xe82a;</i>Télécharger le dossier de subventions</button>
             <form>
-                <p><label>Email : </label><input type='text'/><p>
-                <p><label>Objet sponsorisation : </label><textarea></textarea><p>
+                <p><label>Email : </label><br/><input type='text'/><p>
+                <p><label>Détail sponsorisation : </label><br/><textarea></textarea><p>
                 <button type='submit'>Envoyer</button>
             </form>
         </section>

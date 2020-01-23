@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "nasalization";
+  src: url("../fonts/nasalization-rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ICONES */
 .icone {
   font-family: "fontello";
@@ -42,7 +49,7 @@ body {
   background: -ms-radial-gradient(center, circle, #cce6ff, #4da6ff);
   background: -o-radial-gradient(center, circle, #cce6ff, #4da6ff);
   background: radial-gradient(circle at center, #cce6ff, #4da6ff);
-  font-family: "atwriter", "VCR", "Postface", Arial, sans-serif;
+  font-family: "nasalization", "atwriter", "VCR", "Postface", Arial, sans-serif;
   text-align: center;
 }
 section {
@@ -62,6 +69,17 @@ section .section_name {
 }
 section h2 {
   border-bottom: 2px dashed black;
+}
+
+.link {
+  text-decoration: underline;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: yellow;
+  background-color: black;
 }
 header,
 footer {
@@ -220,4 +238,33 @@ footer {
   width: 20%;
   height: auto;
   margin: 1%;
+}
+input,
+textarea {
+  display: inline-block;
+  min-width: 30%;
+  max-width: 30%;
+  padding: 10px;
+  margin: 1%;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+button {
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+  margin: 1%;
+  border: 0px solid rgb(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0);
+}
+button:hover {
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+button .icone {
+  margin-right: 10px;
 }

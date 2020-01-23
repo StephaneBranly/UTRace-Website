@@ -20,8 +20,10 @@
         <?php include_once("./elements/header.php"); ?>
         
         <section>
-            <h1 class="section_name">Welcome</h1>
-            <p>Association créée en septembre 2019 !</p>
+            <h1 class="section_name">L'association</h1>
+            <p>L'objectif de l'association UT'Race (you trace) est de réunir étudiants et habitants de l'Oise lors d'un événement qui aura lieu une fois par an : une course de karts à pédales autour du Centre Benjamin Franklin !
+                <br/><br/>
+                L'événement propose donc la course mais aussi un village associatif qui aura pour but d'animer la journée en proposant de nombreuses activités aux spectateurs ! Des activités qui auront pour thèmes principaux la sécurité routière et les gestes éco-responsables.</p>
         </section>
 
         <section>
