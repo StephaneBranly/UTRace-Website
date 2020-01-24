@@ -25,7 +25,6 @@
         <div class='equipe p20p'>
             <h1 class='equipe_name'>Nom_equipe</h1>
             <img class='equipe_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image de l equipe NOM_EQUIPE'/>
-            <p>Description equipe</p>
             <div class='spe'>
                 <div class='note'>
                     Esthétique:
