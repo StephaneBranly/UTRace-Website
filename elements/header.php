@@ -1,4 +1,5 @@
 <header>
+    <img id='logo' src='./ressources/images/logo.png' alt='Logo UTRace'/>
     <nav>
         <ul>
             <li><a href='Accueil.php'><i class='icone icon-home'>&#xe82c;</i>Accueil</a></li>

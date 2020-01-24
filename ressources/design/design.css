@@ -48,7 +48,7 @@
 /* GENERAL */
 body {
   margin: 0;
-  padding: 0;
+  padding: 2%;
   background: -webkit-radial-gradient(center, circle, #cce6ff, #4da6ff);
   background: -moz-radial-gradient(center, circle, #cce6ff, #4da6ff);
   background: -ms-radial-gradient(center, circle, #cce6ff, #4da6ff);
@@ -62,10 +62,9 @@ section {
   margin: 30px;
   display: inline-block;
   width: 95%;
-  border: 5px solid black;
-  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgb(22, 22, 22);
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(250, 250, 250, 0.45);
 }
 section .section_name {
   background-color: #000;
@@ -93,10 +92,19 @@ footer {
   background-repeat: repeat-y;
   background-position: top;
 }
+header {
+  box-shadow: 5px 5px 0px rgb(22, 22, 22);
+}
+header #logo {
+  float: left;
+  height: 100px;
+  width: auto;
+}
 header .icone {
   margin-right: 10px;
 }
 header nav {
+  display: inline-block;
   padding: 15px;
   text-align: center;
 }
@@ -155,17 +163,16 @@ footer div {
   height: 400px;
 }
 footer {
-  border-top: 5px solid black;
+  box-shadow: 5px 5px 0px rgb(22, 22, 22);
 }
 
 /* EQUIPES */
 .equipe {
   display: inline-block;
-  width: 30%;
+  width: 40%;
   margin: 1%;
   overflow: hidden;
-  border: 5px solid black;
-  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgb(22, 22, 22);
   background-color: rgba(0, 0, 0, 0.1);
 }
 .equipe .equipe_name {
@@ -176,12 +183,14 @@ footer {
 .equipe .equipe_img {
   width: 100%;
   height: auto;
+  border-bottom: 2px solid black;
 }
 
 .equipe .spe {
+  border-bottom: 2px solid black;
   border-top: 2px solid black;
-
   text-align: left;
+  margin-bottom: 10px;
 }
 .equipe .spe div {
   margin: 10px;
@@ -251,27 +260,29 @@ footer {
 }
 input,
 textarea {
+  font-family: "nasalization", "atwriter", "VCR", "Postface", Arial, sans-serif;
   display: inline-block;
   min-width: 30%;
   max-width: 30%;
   padding: 10px;
   margin: 1%;
-  border: 5px solid black;
-  border-radius: 10px;
+  border: 1px solid rgb(22, 22, 22);
+  box-shadow: 5px 5px 0px rgb(22, 22, 22);
   background-color: white;
 }
 
 button {
+  font-family: "nasalization", "atwriter", "VCR", "Postface", Arial, sans-serif;
   display: inline-block;
   width: 30%;
   padding: 10px;
   margin: 1%;
-  border: 0px solid rgb(0, 0, 0, 0);
-  border-radius: 10px;
+  border: 1px solid rgb(22, 22, 22);
   background-color: white;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 0px rgb(22, 22, 22);
 }
 button:hover {
+  background-color: yellow;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
   cursor: pointer;
 }
