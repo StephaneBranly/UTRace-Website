@@ -18,8 +18,12 @@
 	</head>
 	<body>
         <?php include_once("./elements/header.php"); ?>
+        <?php 
         
-        <div class='equipe'>
+        for ($i = 1; $i <= 8; $i++) {
+            
+        echo"
+        <div class='equipe p40p'>
             <h1 class='equipe_name'>Nom_equipe</h1>
             <img class='equipe_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image de l equipe NOM_EQUIPE'/>
             <p>Description equipe</p>
@@ -33,8 +37,9 @@
                     <i class='icone icon-star-empty'>&#xe818;</i>
                 </div>
                 <div class='cote'><i class='icone icon-chart-line icone_margin'>&#xf201;</i>Cote : 1.03</div>
-                <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div>
             </div>
+            <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div>
+
             <table class='equipage'>
                 <tr class='pilote'>
                     <table class='badge'>
@@ -76,8 +81,9 @@
                     </table>
                 </tr>
             </table>
-
-        </div>
+        </div>";
+        }
+        ?>
         <?php include_once("./elements/footer.php"); ?>
     </body>
 	
