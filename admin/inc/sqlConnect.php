@@ -2,7 +2,7 @@
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
-$dbname = 'dokkan';
+$dbname = 'utrace';
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting tomysql');
 mysqli_query($connect,"SET NAMES UTF8");
 mysqli_set_charset($connect,"UTF8");

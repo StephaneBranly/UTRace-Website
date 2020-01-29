@@ -26,9 +26,13 @@
           <a href="add-team.php"><li>Ajouter</li></a>
           <a href="edit-team.php"><li>Modifier</li></a>
 
+          <li class="title">Sponsor</li>
+          <a href="add-sponso.php"><li>Ajouter</li></a>
+          <a href="del-sponso.php"><li>Supprimer</li></a>
+
           <li class="title">Vote</li>
           <a href="#"><li>Creer</li></a>
-          <a href="#"><li>voir les votes</li></a>
+          <a href="#"><li>Voir les votes</li></a>
 
           <li class="title">Tiercé</li>
           <a href="#"><li>quelque chose</li></a>
