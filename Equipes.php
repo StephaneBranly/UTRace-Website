@@ -30,11 +30,11 @@
             <div class='spe'>
                 <div class='note'>
                     <i class='icone icon-eye icone_margin'>&#xe826;</i>Esthétique :
-                    <i class='icone icon-star'>&#xe817;</i>
-                    <i class='icone icon-star'>&#xe817;</i>
-                    <i class='icone icon-star'>&#xe817;</i>
-                    <i class='icone icon-star-half-alt'>&#xf123;</i>
-                    <i class='icone icon-star-empty'>&#xe818;</i>
+                    <i class='icone icon-ico-star'>&#xe817;</i>
+                    <i class='icone icon-ico-star'>&#xe817;</i>
+                    <i class='icone icon-ico-star'>&#xe817;</i>
+                    <i class='icone icon-ico-star-half-alt'>&#xf123;</i>
+                    <i class='icone icon-ico-star-empty'>&#xe818;</i>
                 </div>
                 <div class='cote'><i class='icone icon-chart-line icone_margin'>&#xf201;</i>Cote : 1.03</div>
             </div>
