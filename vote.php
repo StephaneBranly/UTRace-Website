@@ -13,38 +13,75 @@
             $nom_page='Vote';
             $description_page='Notez les équipes !';
             include_once("./elements/meta.php");
+            
+        include_once("./admin/inc/sqlConnect.php");
         ?>
         <meta charset="UTF-8">
 	</head>
 	<body>
         <?php include_once("./elements/header.php"); ?>
         <h1>Votez pour votre equipe préferée !</h1>
-        <p> Notez sur 5 l'apparence de chaque equipes !</p>
-        <form method="post">
-            <input required type="text" name="name" placeholder="Votre nom">
-            <input required type="mail" name="mail" placeholder="Votre adresse mail">
         <?php 
         
-        for ($i = 1; $i <= 4; $i++) {
-            
-        echo "<div class='equipe p40p'>
-            <h1 class='equipe_name'>Nom_equipe</h1>
-            <img class='equipe_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image de l equipe NOM_EQUIPE'/>
-            <p>Description equipe</p>
+        if(isset($_POST["submit"])){
+            if(isset($_POST["mail"])&&$_POST["mail"]!=""&&
+               isset($_POST["name"])&&$_POST["name"]!=""){
+                $name = addslashes($_POST["name"]);
+                $mail = addslashes($_POST["mail"]);
+                $pass = uniqid();
+                $query1 = mysqli_query($connect,"INSERT INTO voter values (0,'$name','$mail','$pass',false)");
+                if(mysqli_errno($connect)==1062){
+                    echo "<p style='color:red;'> Erreur : vous avez deja noté les équipes, vous ne pouvez pas modifier vos note</p>";
+                }else{
+                    $id=mysqli_insert_id($connect);
+                    //mail($mail,"Vote UTRace","Bonjour $name,\n Vous avez notez les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.");
+                    echo "Bonjour $name,\n Vous avez notez les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.";
+                    $query2 = mysqli_query($connect,"SELECT * FROM team");
+                    
+                    while($row2 = mysqli_fetch_array($query2)){
+                      
+                        if(isset($_POST["rating$row2[0]"])){
+             
+                            $note = (float) $_POST["rating$row2[0]"];
+                            $query3 = mysqli_query($connect,"INSERT INTO vote values (0,$id,$row2[0],$note)"); 
+                        }else{
+                            $query3 = mysqli_query($connect,"INSERT INTO vote values (0,$id,$row2[0],0)"); 
+                    }
+                }
+            }
+                
+        }else{
+            echo "<p> Notez sur 5 l'apparence de chaque equipes ! Attention vous ne pourrez pas modifier ces note !</p>";
+        }
+    }
+        ?>
+        <form method="post">
+            <input required type="text" name="name" placeholder="Votre nom">
+            <input required type="email" name="mail" placeholder="Votre adresse mail">
+        <?php 
+        include_once("./elements/header.php"); 
+        $query = mysqli_query($connect,"SELECT * FROM team");
+        while($row = mysqli_fetch_array($query)){
+         $id=$row[0];   
+            echo"
+        <div class='equipe p40p'>
+            <h1 class='equipe_name'>$row[1]</h1>
+            <img class='equipe_img' src='img/team/team$row[0].png' alt='Image de l equipe $row[1]'/>
+            <p>$row[2]</p>
             <div class='spe'>
                 <div class='note'>
                 <h3>Note :</h3>
                 <fieldset class='rating'>
-                <input type='radio' id='star5' name='rating' value='5' /><label class = 'full' for='star5' ></label>
-                <input type='radio' id='star4half' name='rating' value='4.5' /><label class='half' ></label>
-                <input type='radio' id='star4' name='rating' value='4' /><label class = 'full' for='star4' ></label>
-                <input type='radio' id='star3half' name='rating' value='3.5' /><label class='half' for='star3half' ></label>
-                <input type='radio' id='star3' name='rating' value='3' /><label class = 'full' for='star3' ></label>
-                <input type='radio' id='star2half' name='rating' value='2.5' /><label class='half' for='star2half' ></label>
-                <input type='radio' id='star2' name='rating' value='2' /><label class = 'full' for='star2' ></label>
-                <input type='radio' id='star1half' name='rating' value='1.5' /><label class='half' ></label>
-                <input type='radio' id='star1' name='rating' value='1' /><label class = 'full' for='star1' ></label>
-                <input type='radio' id='starhalf' name='rating' value='0.5' /><label class='half' for='starhalf' ></label>
+                <input type='radio' id='star5_$id' name='rating$id' value='5' /><label class = 'full' for='star5_$id' ></label>
+                <input type='radio' id='star4half_$id' name='rating$id' value='4.5' /><label class='half' for='star4half_$id' ></label>
+                <input type='radio' id='star4_$id' name='rating$id' value='4' /><label class = 'full' for='star4_$id' ></label>
+                <input type='radio' id='star3half_$id' name='rating$id' value='3.5' /><label class='half' for='star3half_$id' ></label>
+                <input type='radio' id='star3_$id' name='rating$id' value='3' /><label class = 'full' for='star3_$id' ></label>
+                <input type='radio' id='star2half_$id' name='rating$id' value='2.5' /><label class='half' for='star2half_$id' ></label>
+                <input type='radio' id='star2_$id' name='rating$id' value='2' /><label class = 'full' for='star2_$id' ></label>
+                <input type='radio' id='star1half_$id' name='rating$id' value='1.5' /><label class='half' for='star1half_$id' ></label>
+                <input type='radio' id='star1_$id' name='rating$id' value='1' /><label class = 'full' for='star1_$id' ></label>
+                <input type='radio' id='starhalf_$id' name='rating$id' value='0.5' /><label class='half' for='starhalf_$id' ></label>
             </fieldset>
                 </div>
             </div>
@@ -55,11 +92,11 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot1_$row[0].png' alt='Image du piote $row[3]'/></div>
                             </td>
                             <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[3]</h1>
+                                <p>$row[4]<p>
                             </td>
                         </tr>
                     </table>
@@ -68,11 +105,11 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot2_$row[0].png' alt='Image du piote $row[5]'/></div>
                             </td>
                             <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[5]</h1>
+                                <p>$row[6]<p>
                             </td>
                         </tr>
                     </table>
@@ -81,18 +118,19 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot3_$row[0].png' alt='Image du piote $row[7]'/></div>
                             </td>
                             <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[7]</h1>
+                                <p>$row[8]<p>
                             </td>
                         </tr>
                     </table>
                 </tr>
             </table>
-        </div>";     
+        </div>";
         }
+        
         ?>
         <input type="submit" name="submit" value="Envoyer">
         </form>

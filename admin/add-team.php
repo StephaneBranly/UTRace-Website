@@ -4,7 +4,7 @@ if (!isset($_SESSION["connect"])) {
   header("Location : index.php");
 } else {
   include("inc/header.php");
-  //include("inc/sqlConnect.php");
+  include("inc/sqlConnect.php");
   ?>
   <div class="container form">
     <h1>Ajouter une team</h1>
@@ -17,14 +17,44 @@ if (!isset($_SESSION["connect"])) {
            isset($_POST["descrPilot3"])&&$_POST["descrPilot3"]!=""&&
            isset($_POST["pilot1"])&&$_POST["pilot1"]!=""&&
            isset($_POST["pilot2"])&&$_POST["pilot2"]!=""&&
-           isset($_POST["pilot3"])&&$_POST["pilot3"]!=""){
+           isset($_POST["pilot3"])&&$_POST["pilot3"]!=""&&
+           $_FILES["imgTeam"]["error"] == 0 && (pathinfo($_FILES["imgTeam"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgTeam"]["name"])['extension']=="png")&&
+           $_FILES["imgPilot1"]["error"] == 0 && (pathinfo($_FILES["imgPilot1"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgPilot1"]["name"])['extension']=="png")&&
+           $_FILES["imgPilot2"]["error"] == 0 && (pathinfo($_FILES["imgPilot2"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgPilot2"]["name"])['extension']=="png")&&
+           $_FILES["imgPilot3"]["error"] == 0 && (pathinfo($_FILES["imgPilot3"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgPilot3"]["name"])['extension']=="png")){
 
+            $name = addslashes($_POST["name"]);
+            $descrPilot1 = addslashes($_POST["descrPilot1"]);
+            $descrPilot2 = addslashes($_POST["descrPilot2"]);
+            $descrPilot3 = addslashes($_POST["descrPilot3"]);
+            $pilot1 = addslashes($_POST["pilot1"]);
+            $pilot2 = addslashes($_POST["pilot2"]);
+            $pilot3 = addslashes($_POST["pilot3"]);
+            $descr = addslashes($_POST["descr"]);
+
+            $query = mysqli_query($connect,"INSERT into team values(0,'$name','$descr','$pilot1','$descrPilot1','$pilot2','$descrPilot2','$pilot3','$descrPilot3')");
+            if($query){
+              $id = mysqli_insert_id($connect);
+              move_uploaded_file($_FILES["imgTeam"]["tmp_name"], "../img/team/team$id.png");
+              move_uploaded_file($_FILES["imgPilot1"]["tmp_name"], "../img/team/pilot1_$id.png");
+              move_uploaded_file($_FILES["imgPilot2"]["tmp_name"], "../img/team/pilot2_$id.png");
+              move_uploaded_file($_FILES["imgPilot3"]["tmp_name"], "../img/team/pilot3_$id.png");
+              echo"
+              <div class='green_alert alert'>
+                  <p>La team a bien été ajouté</p>
+              </div>";
+            }else{
+              echo"
+              <div class='red_alert alert'>
+                  <p>Il y a eu une erreur veuillez contacter un admin</p>
+              </div>";
+
+            }
         }else{
-          echo <<<END
-            <div class="red_alert alert">
-                <p>Il manque des informations</p>
-            </div>
-END;
+          echo"
+              <div class='red_alert alert'>
+                  <p>Erreur il manque des informations</p>
+              </div>";
         }
       }
     
