@@ -28,11 +28,15 @@
 
         <section>
             <h1 class="section_name">Les sponsors</h1>
-            <a href='' target='_blank'><img class='sponsor' src='https://upload.wikimedia.org/wikipedia/en/f/f6/UTC_logo.png' alt='NOM_DU_SPONSOR/'></a>
-            <a href='' target='_blank'><img class='sponsor' src='https://www.myroom-residence.com/wp-content/uploads/2013/10/Logo-BDE-150.jpg' alt='NOM_DU_SPONSOR/'></a>
-            <a href='' target='_blank'><img class='sponsor' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg/800px-Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg.png' alt='NOM_DU_SPONSOR/'></a>
-            <a href='' target='_blank'><img class='sponsor' src='https://upload.wikimedia.org/wikipedia/fr/thumb/8/80/Logo_Hauts-de-France_2016.svg/1024px-Logo_Hauts-de-France_2016.svg.png' alt='NOM_DU_SPONSOR/'></a>
-            <a href='' target='_blank'><img class='sponsor' src='http://2014.igem.org/wiki/images/8/8d/AMU_Team-logo_fsdie.png' alt='NOM_DU_SPONSOR/'></a>
+            <?php 
+            include_once("./admin/inc/sqlConnect.php"); 
+            $query = mysqli_query($connect,"SELECT * FROM sponso");
+            while($row = mysqli_fetch_array($query)){
+                echo "<a href='$row[2]' target='_blank'><img class='sponsor' src='./img/sponso/sponso$row[0].png' alt='$row[1]'></a>";
+            }
+            
+            ?>
+
         </section>
 
         <section id='sponsoring'>
