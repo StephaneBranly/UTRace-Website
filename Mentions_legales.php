@@ -16,7 +16,7 @@
         
         <section>
             <h1 class="section_name" >Mentions légales</h1>
-            <p>A REMPLIR</p>
+            <p>Cette page n'est pas encore à jour, merci de contacter utrace@assos.utc.fr si vous avez des questions.</p>
         </section>
         <?php include_once("./elements/footer.php"); ?>
     </body>

@@ -26,10 +26,11 @@
                 $pass = uniqid();
                 $query1 = mysqli_query($connect,"INSERT INTO voter values (0,'$name','$mail','$pass',false)");
                 if(mysqli_errno($connect)==1062){
-                    echo "<p style='color:red;'> Erreur : vous avez deja noté les équipes, vous ne pouvez pas modifier vos note</p>";
+                    echo "<p style='color:red;'> Erreur : vous avez deja noté les équipes, vous ne pouvez pas modifier vos notes...</p>";
                 }else{
                     $id=mysqli_insert_id($connect);
                     mail($mail,"Vote UTRace","Bonjour $name,\n Vous avez noté les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.");
+                    echo "<p>Un mail vous a été envoyé, merci de confirmer votre vote via ce dernier !</p>";
                     //echo "Bonjour $name,\n Vous avez noté les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.";
                     $query2 = mysqli_query($connect,"SELECT * FROM team");
                     
