@@ -19,7 +19,7 @@ if (!isset($_SESSION["connect"])) {
             $importance = $_POST["importance"];
             $query = mysqli_query($connect,"INSERT INTO sponso (name,link,importance) VALUES ('$name','$link',$importance)");
             $id = mysqli_insert_id($connect);
-            $url = "../img/sponso/sponso$id.png";
+            $url = "../ressources/sponso/sponso$id.png";
             $tmp_name = $_FILES["img"]["tmp_name"];
             move_uploaded_file($tmp_name, $url);
             echo <<<END

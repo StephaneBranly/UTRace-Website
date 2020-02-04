@@ -12,7 +12,7 @@ if (!isset($_SESSION["connect"])) {
 
                 $id = $_POST['id'];
                 $query = mysqli_query($connect, "DELETE FROM sponso WHERE id=$id");
-                unlink("../img/sponso/sponso$id.png") or die("Couldn't delete file");
+                unlink("../ressources/sponso/sponso$id.png") or die("Couldn't delete file");
                 echo <<<END
             <div class="green_alert alert">
                 <p>La tierlist a été Suprimé</p>

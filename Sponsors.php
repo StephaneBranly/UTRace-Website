@@ -27,7 +27,7 @@
             include_once("./admin/inc/sqlConnect.php"); 
             $query = mysqli_query($connect,"SELECT * FROM sponso");
             while($row = mysqli_fetch_array($query)){
-                echo "<a href='$row[2]' target='_blank'><img class='sponsor' src='./img/sponso/sponso$row[0].png' alt='$row[1]'></a>";
+                echo "<a href='$row[2]' target='_blank'><img class='sponsor' src='./ressources/sponso/sponso$row[0].png' alt='$row[1]'></a>";
             }
             
             ?>
