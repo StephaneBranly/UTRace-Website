@@ -36,7 +36,7 @@
 
         <section id='sponsoring'>
             <h1 class="section_name">Nous sponsoriser</h1> 
-            <button type='submit'><i class='icone icon-attach icone_margin'>&#xe82a;</i>Télécharger le dossier de subventions</button>
+            <a href='./ressources/docs/Dossier_de_sponsoring_UTRace.pdf' target='_blank'><button type='submit' ><i class='icone icon-attach icone_margin'>&#xe82a;</i>Télécharger le dossier de subventions</button></a>
             <form>
                 <p><label>Email : </label><br/><input type='text'/><p>
                 <p><label>Entreprise : </label><br/><input type='text'/><p>
