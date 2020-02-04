@@ -1,8 +1,3 @@
-<?php
-    include_once("./lib/gestion_session.php");
-    include_once("./lib/bdd_config.php");
-?>
-
 <!DOCTYPE html>
 <html>
 	<link href="./ressources/design/design.css" rel="stylesheet" media="all" type="text/css">
@@ -31,11 +26,12 @@
                 $pass = uniqid();
                 $query1 = mysqli_query($connect,"INSERT INTO voter values (0,'$name','$mail','$pass',false)");
                 if(mysqli_errno($connect)==1062){
-                    echo "<p style='color:red;'> Erreur : vous avez deja noté les équipes, vous ne pouvez pas modifier vos note</p>";
+                    echo "<p style='color:red;'> Erreur : vous avez deja noté les équipes, vous ne pouvez pas modifier vos notes...</p>";
                 }else{
                     $id=mysqli_insert_id($connect);
-                    //mail($mail,"Vote UTRace","Bonjour $name,\n Vous avez notez les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.");
-                    echo "Bonjour $name,\n Vous avez notez les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.";
+                    mail($mail,"Vote UTRace","Bonjour $name,\n Vous avez noté les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.");
+                    echo "<p>Un mail vous a été envoyé, merci de confirmer votre vote via ce dernier !</p>";
+                    //echo "Bonjour $name,\n Vous avez noté les teams de UTRace, veuillez cliquer sur ce <a href='https://assos.utc.fr/utrace/confirm.php?id=$id&pass=$pass'>Lien</a> pour confirmer votre notation.\nSi vous n'avez pas voté, veuillez ignorer ce mail.\n\nCordialement,\nl'équipe UTRace.";
                     $query2 = mysqli_query($connect,"SELECT * FROM team");
                     
                     while($row2 = mysqli_fetch_array($query2)){
@@ -66,7 +62,7 @@
             echo"
         <div class='equipe p40p'>
             <h1 class='equipe_name'>$row[1]</h1>
-            <img class='equipe_img' src='img/team/team$row[0].png' alt='Image de l equipe $row[1]'/>
+            <img class='equipe_img' src='ressources/team/team$row[0].png' alt='Image de l equipe $row[1]'/>
             <p>$row[2]</p>
             <div class='spe'>
                 <div class='note'>
@@ -92,7 +88,7 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot1_$row[0].png' alt='Image du piote $row[3]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot1_$row[0].png' alt='Image du piote $row[3]'/></div>
                             </td>
                             <td class='right'>
                                 <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[3]</h1>
@@ -105,7 +101,7 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot2_$row[0].png' alt='Image du piote $row[5]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot2_$row[0].png' alt='Image du piote $row[5]'/></div>
                             </td>
                             <td class='right'>
                                 <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[5]</h1>
@@ -118,7 +114,7 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot3_$row[0].png' alt='Image du piote $row[7]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot3_$row[0].png' alt='Image du piote $row[7]'/></div>
                             </td>
                             <td class='right'>
                                 <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[7]</h1>
@@ -132,7 +128,7 @@
         }
         
         ?>
-        <input type="submit" name="submit" value="Envoyer">
+        <button type="submit" name="submit">Envoyer</button>
         </form>
         <?php include_once("./elements/footer.php"); ?>
     </body>

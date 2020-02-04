@@ -35,10 +35,10 @@ if (!isset($_SESSION["connect"])) {
             $query = mysqli_query($connect,"INSERT into team values(0,'$name','$descr','$pilot1','$descrPilot1','$pilot2','$descrPilot2','$pilot3','$descrPilot3')");
             if($query){
               $id = mysqli_insert_id($connect);
-              move_uploaded_file($_FILES["imgTeam"]["tmp_name"], "../img/team/team$id.png");
-              move_uploaded_file($_FILES["imgPilot1"]["tmp_name"], "../img/team/pilot1_$id.png");
-              move_uploaded_file($_FILES["imgPilot2"]["tmp_name"], "../img/team/pilot2_$id.png");
-              move_uploaded_file($_FILES["imgPilot3"]["tmp_name"], "../img/team/pilot3_$id.png");
+              move_uploaded_file($_FILES["imgTeam"]["tmp_name"], "../ressources/team/team$id.png");
+              move_uploaded_file($_FILES["imgPilot1"]["tmp_name"], "../ressources/team/pilot1_$id.png");
+              move_uploaded_file($_FILES["imgPilot2"]["tmp_name"], "../ressources/team/pilot2_$id.png");
+              move_uploaded_file($_FILES["imgPilot3"]["tmp_name"], "../ressources/team/pilot3_$id.png");
               echo"
               <div class='green_alert alert'>
                   <p>La team a bien été ajouté</p>

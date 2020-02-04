@@ -1,8 +1,3 @@
-<?php
-    include_once("./lib/gestion_session.php");
-    include_once("./lib/bdd_config.php");
-?>
-
 <!DOCTYPE html>
 <html>
 	<link href="./ressources/design/design.css" rel="stylesheet" media="all" type="text/css">
@@ -21,7 +16,7 @@
         
         <section>
             <h1 class="section_name" >Live</h1>
-            <p>A REMPLIR</p>
+            <p>Un Live sera surement disponible pour voir l'événement si malheureusement vous ne pouvez pas être présent !</p>
         </section>
         <?php include_once("./elements/footer.php"); ?>
     </body>

@@ -1,8 +1,3 @@
-<?php
-    include_once("./lib/gestion_session.php");
-    include_once("./lib/bdd_config.php");
-?>
-
 <!DOCTYPE html>
 <html>
 	<link href="./ressources/design/design.css" rel="stylesheet" media="all" type="text/css">
@@ -30,7 +25,7 @@
             echo"
         <div class='equipe p40p'>
             <h1 class='equipe_name'>$row[1]</h1>
-            <img class='equipe_img' src='img/team/team$row[0].png' alt='Image de l equipe $row[1]'/>
+            <img class='equipe_img' src='ressources/team/team$row[0].png' alt='Image de l equipe $row[1]'/>
             <p>$row[2]</p>
             <div class='spe'>
                 <div class='note'>
@@ -59,7 +54,7 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot1_$row[0].png' alt='Image du piote $row[3]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot1_$row[0].png' alt='Image du piote $row[3]'/></div>
                             </td>
                             <td class='right'>
                                 <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[3]</h1>
@@ -72,7 +67,7 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot2_$row[0].png' alt='Image du piote $row[5]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot2_$row[0].png' alt='Image du piote $row[5]'/></div>
                             </td>
                             <td class='right'>
                                 <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[5]</h1>
@@ -85,7 +80,7 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='img/team/pilot3_$row[0].png' alt='Image du piote $row[7]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot3_$row[0].png' alt='Image du piote $row[7]'/></div>
                             </td>
                             <td class='right'>
                                 <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[7]</h1>

@@ -1,3 +1,14 @@
-DirectoryIndex ./Accueil.php
+DirectoryIndex ./index.php
 RewriteEngine on
-RewriteRule ^Accueil$ Accueil.php [L] 
+RewriteRule ^index$ index.php [L] 
+RewriteRule ^A_propos$ A_propos.php [L] 
+RewriteRule ^Association$ Association.php [L] 
+RewriteRule ^Equipes$ Equipes.php [L] 
+RewriteRule ^Evenement$ Evenement.php [L] 
+RewriteRule ^Live$ Live.php [L] 
+RewriteRule ^Mentions_legales$ Mentions_legales.php [L] 
+RewriteRule ^Riverains$ Riverains.php [L] 
+RewriteRule ^Sponsors$ Sponsors.php [L] 
+RewriteRule ^Toutes_equipes$ Toutes_equipes.php [L] 
+RewriteRule ^vote$ vote.php [L] 
+RewriteRule ^confirm$ confirm.php [L] 
