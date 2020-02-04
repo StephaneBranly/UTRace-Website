@@ -1,8 +1,3 @@
-<?php
-    include_once("./lib/gestion_session.php");
-    include_once("./lib/bdd_config.php");
-?>
-
 <!DOCTYPE html>
 <html>
 	<link href="./ressources/design/design.css" rel="stylesheet" media="all" type="text/css">
