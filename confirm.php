@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<link href="./ressources/design/design.css" rel="stylesheet" media="all" type="text/css">
-	<link rel="icon" href="./Ressources/images/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="./ressources/images/favicon.ico" type="image/x-icon"/>
     <head>
         <?php
             include_once("./lib/google_analytics.php");
