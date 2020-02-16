@@ -285,7 +285,6 @@ textarea {
   padding: 10px;
   margin: 1%;
   border: 1px solid rgb(22, 22, 22);
-  box-shadow: 5px 5px 0px rgb(22, 22, 22);
   background-color: white;
 }
 
@@ -297,11 +296,9 @@ button {
   margin: 1%;
   border: 1px solid rgb(22, 22, 22);
   background-color: white;
-  box-shadow: 5px 5px 0px rgb(22, 22, 22);
 }
 button:hover {
-  background-color: yellow;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  background-color: rgba(56, 254, 158, 1);
   cursor: pointer;
 }
 .icone_margin {
