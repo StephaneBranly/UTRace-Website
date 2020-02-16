@@ -15,8 +15,10 @@
         <?php include_once("./elements/header.php"); ?>
         
         <section>
-            <h1 class="section_name" >Live</h1>
-            <p>Un Live sera surement disponible pour voir l'événement si malheureusement vous ne pouvez pas être présent !</p>
+            <div class='content_section'>
+                <h1 class="section_name" >Live</h1>
+                <p>Un Live sera surement disponible pour voir l'événement si malheureusement vous ne pouvez pas être présent !</p>
+            </div>
         </section>
         <?php include_once("./elements/footer.php"); ?>
     </body>

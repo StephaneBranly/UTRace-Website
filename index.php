@@ -15,8 +15,10 @@
         <?php include_once("./elements/header.php"); ?>
         
         <section>
-            <h1 class="section_name">Welcome</h1>
-            <p>Bienvenue sur l'accueil de notre association ! L'événement organisé aura bientôt lieu !!!</p>
+            <div class='content_section'>
+                <h1 class="section_name">Welcome</h1>
+                <p>Bienvenue sur l'accueil de notre association ! L'événement organisé aura bientôt lieu !!!</p>
+            </div>
         </section>
 
         <?php include_once("./elements/footer.php"); ?>

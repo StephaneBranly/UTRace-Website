@@ -1,5 +1,5 @@
 <header>
-    <img id='logo' src='./ressources/images/logo.png' alt='Logo UTRace'/>
+    <div id='logo'><img  src='./ressources/images/logo.png' alt='Logo UTRace'/></div>
     <nav>
         <ul>
             <li><a href='index.php'><i class='icone icone-home'>&#xe82c;</i>Accueil</a></li>
