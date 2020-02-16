@@ -31,11 +31,11 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/branly.png' alt='Image de Stéphane BRANLY'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Stéphane BRANLY</h1>
+                                    <p>Président de l'association<p>
                                 </td>
                             </tr>
                         </table>
@@ -44,11 +44,11 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/piettre.png' alt='Image d Eloi Piettre'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Eloi PIETTRE</h1>
+                                    <p>Vice président<p>
                                 </td>
                             </tr>
                         </table>
@@ -57,11 +57,11 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/nagy.png' alt='Image de Timéa Nagy'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Timéa NAGY</h1>
+                                    <p>Trésorière<p>
                                 </td>
                             </tr>
                         </table>
@@ -69,11 +69,11 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/wittevrongel.png' alt='Image de Margot Wittevrongel'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Margot WITTEVRONGEL</h1>
+                                    <p>Secrétaire<p>
                                 </td>
                             </tr>
                         </table>
@@ -82,60 +82,24 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/tonini.png' alt='Image de Léa Tonini'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Léa TONINI</h1>
+                                    <p>Responsable<p>
                                 </td>
                             </tr>
                         </table>
-    </div><div class='p30p'>
-                <table class='badge'>
-                            <tr>
-                                <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
-                                </td>
-                                <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
-                                </td>
-                            </tr>
-                        </table>
-    </div>
+</div>
                 <h2>Logistique</h2><div class='p30p'>
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/massari.png' alt='Image de Julie Massari'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
-                                </td>
-                            </tr>
-                        </table>
-    </div><div class='p30p'>
-                <table class='badge'>
-                            <tr>
-                                <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
-                                </td>
-                                <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
-                                </td>
-                            </tr>
-                        </table>
-    </div><div class='p30p'>
-                <table class='badge'>
-                            <tr>
-                                <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
-                                </td>
-                                <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Julie MASSARI</h1>
+                                    <p>Responsable<p>
                                 </td>
                             </tr>
                         </table>
@@ -144,35 +108,11 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/leporho.png' alt='Image de Thibault Le Porho'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
-                                </td>
-                            </tr>
-                        </table>
-    </div><div class='p30p'>
-                <table class='badge'>
-                            <tr>
-                                <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
-                                </td>
-                                <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
-                                </td>
-                            </tr>
-                        </table>
-    </div><div class='p30p'>
-                <table class='badge'>
-                            <tr>
-                                <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
-                                </td>
-                                <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Thibault LE PORHO</h1>
+                                    <p>Responsable<p>
                                 </td>
                             </tr>
                         </table>
@@ -181,23 +121,11 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/delhaye.png' alt='Image de Tanguy Delhaye'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
-                                </td>
-                            </tr>
-                        </table>
-    </div><div class='p30p'>
-                <table class='badge'>
-                            <tr>
-                                <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
-                                </td>
-                                <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Tanguy DELHAYE</h1>
+                                    <p>Responsable<p>
                                 </td>
                             </tr>
                         </table>
@@ -206,23 +134,11 @@
                 <table class='badge'>
                             <tr>
                                 <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
+                                    <div class='image-cropper'><img class='pilote_img' src='./ressources/membres/guichard.png' alt='Image d Amaury Guichard'/></div>
                                 </td>
                                 <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
-                                </td>
-                            </tr>
-                        </table>
-    </div><div class='p30p'>
-                <table class='badge'>
-                            <tr>
-                                <td class='left'>  
-                                    <div class='image-cropper'><img class='pilote_img' src='https://www.asaca.net/documents/archives/images_sections/Karting.jpeg' alt='Image du piote NOM_PILOTE'/></div>
-                                </td>
-                                <td class='right'>
-                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Nom_pilote</h1>
-                                    <p>Description pilote, voici par exemple une description assez longue où je pare de ma vie pour rien dire en fin de compte...<p>
+                                    <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>Amaury GUICHARD</h1>
+                                    <p>Responsable<p>
                                 </td>
                             </tr>
                         </table>
