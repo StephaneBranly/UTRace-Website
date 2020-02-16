@@ -22,7 +22,7 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  color: black;
+  color: rgba(56, 254, 158, 1);
   display: inline-block;
   text-decoration: none;
   font-size: 2em;
@@ -71,6 +71,9 @@ section .content_section {
   height: 100%;
   color: #fff;
 }
+section .content_section p {
+  padding: 5px;
+}
 section .section_name {
   background-color: rgba(56, 254, 158, 1);
   color: rgba(11, 18, 34, 1);
@@ -78,7 +81,7 @@ section .section_name {
   margin: 0px;
 }
 section h2 {
-  border-bottom: 2px dashed black;
+  border-bottom: 2px dashed rgba(56, 254, 158, 1);
 }
 
 .link {
@@ -153,9 +156,9 @@ footer div {
   margin: 30px;
   list-style-type: none;
   overflow: hidden;
-  border: 5px solid black;
+  color: rgba(56, 254, 158, 1);
   display: inline-block;
-  background-color: #ffffff;
+  background-color: rgba(11, 18, 34, 0.9);
 }
 #before_footer {
   background-image: url(../images/ville_bas2.png);
