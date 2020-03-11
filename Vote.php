@@ -15,7 +15,9 @@
 	</head>
 	<body>
         <?php include_once("./elements/header.php"); ?>
-        <h1>Votez pour votre equipe préferée !</h1>
+        <section>
+            <div class='content_section'>
+        <h1 class="section_name">Votez pour votre equipe préferée !</h1>
         <?php 
         
         if(isset($_POST["submit"])){
@@ -47,13 +49,14 @@
             }
                 
         }else{
-            echo "<p> Notez sur 5 l'apparence de chaque equipes ! Attention vous ne pourrez pas modifier ces note !</p>";
+            echo "<p> Notez sur 5 l'apparence de chaque equipe ! Attention vous ne pourrez pas modifier ces note !</p>";
         }
+    }else{
+        echo "<p> Notez sur 5 l'apparence de chaque equipe ! Attention vous ne pourrez pas modifier ces note !</p>";
     }
-        ?>
+        ?></div></section>
         <form method="post">
-            <input required type="text" name="name" placeholder="Votre nom">
-            <input required type="email" name="mail" placeholder="Votre adresse mail">
+            
         <?php 
         include_once("./elements/header.php"); 
         $query = mysqli_query($connect,"SELECT * FROM team");
@@ -63,7 +66,6 @@
         <div class='equipe p40p'>
             <h1 class='equipe_name'>$row[1]</h1>
             <img class='equipe_img' src='ressources/team/team$row[0].png' alt='Image de l equipe $row[1]'/>
-            <p>$row[2]</p>
             <div class='spe'>
                 <div class='note'>
                 <h3>Note :</h3>
@@ -81,54 +83,17 @@
             </fieldset>
                 </div>
             </div>
-            <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div>
-
-            <table class='equipage'>
-                <tr class='pilote'>
-                    <table class='badge'>
-                        <tr>
-                            <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot1_$row[0].png' alt='Image du piote $row[3]'/></div>
-                            </td>
-                            <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[3]</h1>
-                                <p>$row[4]<p>
-                            </td>
-                        </tr>
-                    </table>
-                </tr>
-                <tr class='pilote'>
-                    <table class='badge'>
-                        <tr>
-                            <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot2_$row[0].png' alt='Image du piote $row[5]'/></div>
-                            </td>
-                            <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[5]</h1>
-                                <p>$row[6]<p>
-                            </td>
-                        </tr>
-                    </table>
-                </tr>
-                <tr class='pilote'>
-                    <table class='badge'>
-                        <tr>
-                            <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot3_$row[0].png' alt='Image du piote $row[7]'/></div>
-                            </td>
-                            <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[7]</h1>
-                                <p>$row[8]<p>
-                            </td>
-                        </tr>
-                    </table>
-                </tr>
-            </table>
         </div>";
         }
         
         ?>
-        <button type="submit" name="submit">Envoyer</button>
+        <section>
+            <div class='content_section'>
+                <input required type="text" name="name" placeholder="Votre nom"><br/>
+                <input required type="email" name="mail" placeholder="Votre adresse mail"><br/>
+                <button type="submit" name="submit">Envoyer</button>
+            </div>
+        </section>
         </form>
         <?php include_once("./elements/footer.php"); ?>
     </body>
