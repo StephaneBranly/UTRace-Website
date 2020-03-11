@@ -26,7 +26,7 @@
                 <a class='link' href='https://github.com/StephaneBranly/UTRace-Website/issues' target='_blank'>ici<a> </p> 
                 <p>Police d'écriture : <a href='https://www.dafont.com/fr/nasalization.font' target='_blank' class='link'>Nazalisation</a></p>
                 <p>Icones : <a href='http://fontello.com/' target='_blank' class='link'>Fontello</a></p>
-                <p><i class='icone icone_margin'>&#xe835;</i>Graphismes par
+                <p><i class='icone icone_margin'>&#xe835;</i>Graphismes par <a class='link' href='https://www.instagram.com/_jeandieu_/' target='_blank'>Jeanne Parisse<a>, 
                 <a class='link' href='https://github.com/StephaneBranly' target='_blank'>Stéphane Branly<a> 
                     et <a class='link' href=''>Thibault Le Porho<a> </p> 
             </div>
