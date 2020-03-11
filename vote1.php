@@ -15,6 +15,8 @@
 	</head>
 	<body>
         <?php include_once("./elements/header.php"); ?>
+        <section>
+            <div class='content_section'>
         <h1>Votez pour votre equipe préferée !</h1>
         <?php 
         
@@ -47,13 +49,14 @@
             }
                 
         }else{
-            echo "<p> Notez sur 5 l'apparence de chaque equipes ! Attention vous ne pourrez pas modifier ces note !</p>";
+            echo "<p> Notez sur 5 l'apparence de chaque equipe ! Attention vous ne pourrez pas modifier ces note !</p>";
         }
+    }else{
+        echo "<p> Notez sur 5 l'apparence de chaque equipe ! Attention vous ne pourrez pas modifier ces note !</p>";
     }
-        ?>
+        ?></div></section>
         <form method="post">
-            <input required type="text" name="name" placeholder="Votre nom">
-            <input required type="email" name="mail" placeholder="Votre adresse mail">
+            
         <?php 
         include_once("./elements/header.php"); 
         $query = mysqli_query($connect,"SELECT * FROM team");
@@ -128,7 +131,13 @@
         }
         
         ?>
-        <button type="submit" name="submit">Envoyer</button>
+        <section>
+            <div class='content_section'>
+                <input required type="text" name="name" placeholder="Votre nom">
+                <input required type="email" name="mail" placeholder="Votre adresse mail">
+                <button type="submit" name="submit">Envoyer</button>
+            </div>
+        </section>
         </form>
         <?php include_once("./elements/footer.php"); ?>
     </body>
