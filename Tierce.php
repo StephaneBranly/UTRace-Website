@@ -44,8 +44,8 @@
                         <tr><td></td><td></td><td></td></tr>
                         <tr><td></td><td></td><td></td></tr>
                         <tr><td></td><td class='fill'><select name='first'>
-                            <option>Equipe 1 - Les barjos (cote: 1,03)</option>
-                            <option>Equipe 2 - Les bgs (cote: 1,03)</option>
+                            <option>Les barjos (equipe 1 - cote: 1,03)</option>
+                            <option>Les bgs (equipe 2 - cote: 1,03)</option>
                         <select></td><td></td></tr>
                         <tr><td class='fill'><select name='second'>
                         <option>Equipe 1 - Les barjos (cote: 1,03)</option>

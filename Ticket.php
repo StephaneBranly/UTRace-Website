@@ -30,8 +30,8 @@
                 <p id='email'>Mail : email@mail.com</p>
                 <p id='classement'>
                     1er - Les barjos (equipe 1)<br/>
-                    2eme - Les bgs (equipe 2)<br/>
-                    3eme - Les tarés (equipe 3)
+                    2eme - Les bgs (equipe 6)<br/>
+                    3eme - Les tarés (equipe 4)
                 </p>
             </td></tr>
         </table>
