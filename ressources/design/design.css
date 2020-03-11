@@ -360,3 +360,68 @@ label {
 .rating > input:checked ~ label:hover ~ label {
   color: #ffed85;
 }
+
+#podium {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+#podium .fill {
+  background-color: rgb(0, 0, 0);
+  border: 0px solid black;
+  padding: 0px;
+  margin: 0px;
+}
+#podium .fill_delimiter {
+  background-image: url(../images/delimiteur.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: repeat-y;
+  height: 20px;
+}
+#podium tr {
+  border: 0px solid black;
+  padding: 0px;
+  margin: 0px;
+}
+
+#ticket_section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+#ticket {
+  display: inline;
+}
+#ticket .left {
+  min-width: 30%;
+  max-width: 30%;
+  margin: 0px;
+  background-color: rgb(247, 228, 134);
+  border-right: 2px dashed rgb(0, 0, 0);
+}
+#ticket .right {
+  min-width: 70%;
+  max-width: 70%;
+  margin: 0px;
+  background-color: rgb(247, 228, 134);
+  text-align: right;
+}
+
+#ticket p {
+  margin: 10px;
+  padding: 0px;
+  color: rgb(0, 0, 0);
+}
+#ticket #name {
+  background-color: #000;
+  color: rgb(247, 228, 134);
+  padding-right: 30px;
+}
+#ticket #ticket_number {
+  background-color: #000;
+  color: rgb(247, 228, 134);
+  padding-right: 30px;
+}

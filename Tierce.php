@@ -38,8 +38,26 @@
         <section>
             <div class='content_section'>
                 <h1 class="section_name">Mon parie, mon tiercé</h1> 
-                <p><i class='icone icon-help-circled icone_margin'>&#xe82d;</i> Nous ferons tout notre possible afin de répondre à vos questions dans les plus brefs délais.</p>
                 <form>
+                    <p>
+                    <table cellspacing="0" cellpadding="0" id='podium'>
+                        <tr><td></td><td></td><td></td></tr>
+                        <tr><td></td><td></td><td></td></tr>
+                        <tr><td></td><td class='fill'><select name='first'>
+                            <option>Equipe 1 - Les barjos (cote: 1,03)</option>
+                            <option>Equipe 2 - Les bgs (cote: 1,03)</option>
+                        <select></td><td></td></tr>
+                        <tr><td class='fill'><select name='second'>
+                        <option>Equipe 1 - Les barjos (cote: 1,03)</option>
+                            <option>Equipe 2 - Les bgs (cote: 1,03)</option>
+                        <select></td><td class='fill'>1</td><td></td></tr>
+                        <tr><td class='fill'>2</td><td class='fill'></td><td class='fill'><select name='third'>
+                        <option>Equipe 1 - Les barjos (cote: 1,03)</option>
+                            <option>Equipe 2 - Les bgs (cote: 1,03)</option>
+                        <select></td></tr>
+                        <tr><td class='fill'></td><td class='fill'></td><td class='fill'>3</td></tr>
+                        <tr><td class='fill_delimiter'></td><td class='fill_delimiter'></td><td class='fill_delimiter'></td></tr>
+                    </table></p>
                     <p><label>Email : </label><br/><input type='text'/><br/>
                     <label>Nom : </label><br/><input type='text'/><br/>
                     <label>Prénom : </label><br/><input type='text'/><br/>
