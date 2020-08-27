@@ -47,7 +47,7 @@
                 echo"</div>
                 <div class='cote'><i class='icone icon-chart-line icone_margin'>&#xf201;</i>Cote : 1.03</div>
             </div>
-            <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div>
+            <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div><br/>
 
             <table class='equipage'>
                 <tr class='pilote'>
