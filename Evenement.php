@@ -17,17 +17,11 @@
         <section>
             <div class='content_section'>
                 <h1 class="section_name">La Franklin'Oise</h1>
-                <p>La première édition de cette course de karts appelée Franklin’Oise aura lieu normalement le dimanche 10 mai 2020, à la fin du PMDE. Le parcours est mis en place autour de Benjamin Franklin, c’est à dire dans les quatres rues qui entourent l’UTC : rue de l’Oise, rue Roger Couttolenc, rue du port à bateaux et rue du Chevreuil.<br/><br/>
+                <p>La première édition de cette course de karts appelée Franklin’Oise aura lieu normalement en P21, à la fin du PMDE. Le parcours parcoura le parking de BF et sera semé d'obstacles farfelus !<br/><br/>
                     La course rassemblera huit équipes de trois pilotes qui se relaieront et devront se départager au long de trois à six tours pour terminer premiers et remporter le trophée.</p>
             </div>
         </section>
 
-        <section>
-            <div class='content_section'>
-                <h1 class="section_name">Le parcours</h1>
-                <img src='./ressources/images/carte2.png' alt='plan circuit'/>
-            </div>
-        </section>
         <?php include_once("./elements/footer.php"); ?>
     </body>
 	
