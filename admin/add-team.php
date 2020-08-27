@@ -18,12 +18,20 @@ if (!isset($_SESSION["connect"])) {
            isset($_POST["pilot1"])&&$_POST["pilot1"]!=""&&
            isset($_POST["pilot2"])&&$_POST["pilot2"]!=""&&
            isset($_POST["pilot3"])&&$_POST["pilot3"]!=""&&
-           $_FILES["imgTeam"]["error"] == 0 && (pathinfo($_FILES["imgTeam"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgTeam"]["name"])['extension']=="png")&&
-           $_FILES["imgPilot1"]["error"] == 0 && (pathinfo($_FILES["imgPilot1"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgPilot1"]["name"])['extension']=="png")&&
-           $_FILES["imgPilot2"]["error"] == 0 && (pathinfo($_FILES["imgPilot2"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgPilot2"]["name"])['extension']=="png")&&
-           $_FILES["imgPilot3"]["error"] == 0 && (pathinfo($_FILES["imgPilot3"]["name"])['extension']=="PNG" || pathinfo($_FILES["imgPilot3"]["name"])['extension']=="png")){
+           $_FILES["imgTeam"]["error"] == 0 && 
+           $_FILES["imgPilot1"]["error"] == 0 &&
+           $_FILES["imgPilot2"]["error"] == 0 &&
+           $_FILES["imgPilot3"]["error"] == 0 ){
+            $ext1 = pathinfo($_FILES["imgTeam"]["name"]);
+            $ext2 = pathinfo($_FILES["imgPilot1"]["name"]);
+            $ext3 = pathinfo($_FILES["imgPilot2"]["name"]);
+            $ext4 = pathinfo($_FILES["imgPilot3"]["name"]);
+            if(($ext1["extension"]=="png"||$ext1["extension"]=="PNG")&&
+               ($ext2["extension"]=="png"||$ext2["extension"]=="PNG")&&
+               ($ext3["extension"]=="png"||$ext3["extension"]=="PNG")&&
+               ($ext4["extension"]=="png"||$ext4["extension"]=="PNG")){
 
-            $name = addslashes($_POST["name"]);
+                $name = addslashes($_POST["name"]);
             $descrPilot1 = addslashes($_POST["descrPilot1"]);
             $descrPilot2 = addslashes($_POST["descrPilot2"]);
             $descrPilot3 = addslashes($_POST["descrPilot3"]);
@@ -43,6 +51,14 @@ if (!isset($_SESSION["connect"])) {
               <div class='green_alert alert'>
                   <p>La team a bien été ajouté</p>
               </div>";
+
+               }else{
+                echo"
+                <div class='red_alert alert'>
+                    <p>Erreur : les images ne sont pas au bon format. (PNG)</p>
+                </div>";
+               }
+            
             }else{
               echo"
               <div class='red_alert alert'>
@@ -103,7 +119,7 @@ if (!isset($_SESSION["connect"])) {
           <td><input required id="pilot3" type="text" name="pilot3" /> </td>
         </tr>
         <tr>
-          <td><label for="descrPilot3">Description du pilote n°1:</label></td>
+          <td><label for="descrPilot3">Description du pilote n°3:</label></td>
           <td><textarea required name="descrPilot3" id="descrPilot3" cols="30" rows="10"></textarea> </td>
         </tr>
         <tr>

@@ -5,8 +5,8 @@
         <p><i class='icone icon-file-code icone_margin'>&#xf1c9;</i>Site créé par 
             <a class='link' href='https://github.com/StephaneBranly' target='_blank'>Stéphane Branly<a> 
                 et <a class='link' href='' target='_blank'>Amaury Guichard<a> </p> 
-           <p><a class='link' href='./A_propos.php'>A propos<a>  |  
-               <a class='link' href='./Mentions_legales.php'>Mentions légales<a>  
+           <p><a class='link' href='a_propos'>A propos<a>  |  
+               <a class='link' href='mentions_legales'>Mentions légales<a>  
                </p>
     </div>
 </footer>

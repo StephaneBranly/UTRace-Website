@@ -21,6 +21,9 @@
         <div class="bar3"></div>
 
         <ul id="menu">
+          <li class="title">Header</li>
+          <a href="act-link.php"><li>Activer lien</li></a>
+          <a href="des-link.php"><li>Désactiver lien</li></a>
 
           <li class="title">Teams</li>
           <a href="add-team.php"><li>Ajouter</li></a>
@@ -31,11 +34,10 @@
           <a href="del-sponso.php"><li>Supprimer</li></a>
 
           <li class="title">Vote</li>
-          <a href="#"><li>Creer</li></a>
           <a href="#"><li>Voir les votes</li></a>
 
           <li class="title">Tiercé</li>
-          <a href="#"><li>quelque chose</li></a>
+          <a href="#"><li>Valider un ticket</li></a>
           <li class="title">Autre</li>
           
           <a href="log-out.php"><li>Se deconnecter</li></a>

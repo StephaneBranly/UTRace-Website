@@ -17,411 +17,447 @@
   font-style: normal;
 }
 
-/* ICONES */
-.icone {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  color: rgba(56, 254, 158, 1);
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2em;
-  text-align: center;
+@media all {
+  /* ICONES */
+  .icone {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(42, 170, 121, 1);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: center;
 
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
 
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-}
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+  }
 
-.icon-ico-star,
-.icon-ico-star-empty,
-.icon-ico-star-half-alt {
-  color: yellow;
-}
-.icon-ico-star:hover,
-.icon-ico-star-empty:hover,
-.icon-ico-star-half-alt:hover {
-  cursor: pointer;
-}
-/* GENERAL */
-body {
-  margin: 0;
-  background-color: rgb(0, 119, 109);
-  font-family: "nasalization", "atwriter", "VCR", "Postface", Arial, sans-serif;
-  text-align: center;
-}
-section {
-  text-align: center;
-  margin: 30px;
-  display: inline-block;
-  width: 95%;
-  padding: 5px;
-  overflow: hidden;
-  background-image: url(../images/delimiteur.png);
-  background-size: 100% auto;
-  background-position: top;
-  background-repeat: repeat-y;
-  height: auto;
-}
-section .content_section {
-  background-color: rgba(11, 18, 34, 1);
-  height: 100%;
-  color: #fff;
-}
-section .content_section p {
-  padding: 5px;
-}
-section .section_name {
-  background-color: rgba(56, 254, 158, 1);
-  color: rgba(11, 18, 34, 1);
-  background-position: top;
-  margin: 0px;
-}
-section h2 {
-  border-bottom: 2px dashed rgba(56, 254, 158, 1);
-}
+  .icon-ico-star,
+  .icon-ico-star-empty,
+  .icon-ico-star-half-alt {
+    color: yellow;
+  }
+  .icon-ico-star:hover,
+  .icon-ico-star-empty:hover,
+  .icon-ico-star-half-alt:hover {
+    cursor: pointer;
+  }
+  /* GENERAL */
+  body {
+    margin: 0;
+    background-color: rgb(42, 170, 121);
+    font-family: "nasalization", "atwriter", "VCR", "Postface", Arial,
+      sans-serif;
+    text-align: center;
+  }
+  section {
+    text-align: center;
+    margin: 30px;
+    display: inline-block;
+    width: 70%;
+    padding: 0px;
+    overflow: hidden;
+    background-image: url(../images/delimiteur.png);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: repeat-y;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(11, 18, 34, 1);
+  }
+  section .content_section {
+    background-color: rgb(226, 226, 226);
+    height: 100%;
+    color: rgba(11, 18, 34, 1);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  section .content_section p {
+    padding: 5px;
+  }
+  section .section_name {
+    background-color: rgb(11, 18, 34);
+    color: rgb(226, 226, 226);
+    background-position: top;
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  section h2 {
+    border-bottom: 2px dashed rgba(42, 170, 121, 1);
+  }
 
-.link {
-  text-decoration: underline;
-  color: rgba(56, 254, 158, 1);
-}
+  .link {
+    text-decoration: underline;
+    color: rgba(42, 170, 121, 1);
+  }
 
-.link:hover {
-  text-decoration: none;
-  color: rgba(11, 18, 34, 1);
-  background-color: rgba(56, 254, 158, 1);
-}
-header,
-footer {
-  background-image: url(../images/topography.png);
-  background-size: 100% auto;
-  background-position: top;
-  padding: 0px;
-}
-header #logo {
-  margin-top: 25px;
-  display: inline-block;
-  width: 100%;
-}
-header #logo img {
-  height: 250px;
-  width: auto;
-}
-header .icone {
-  margin-right: 10px;
-  color: #fff;
-}
-header nav {
-  display: inline-block;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-}
-header ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-  display: inline-block;
-}
+  .link:hover {
+    text-decoration: none;
+    color: rgba(11, 18, 34, 1);
+    background-color: rgba(42, 170, 121, 1);
+  }
+  header,
+  footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0px;
+  }
+  header #logo {
+    margin-top: 25px;
+    display: inline-block;
+    width: 100%;
+  }
+  header #logo img {
+    height: 250px;
+    width: auto;
+  }
+  header .icone {
+    margin-right: 10px;
+    color: #fff;
+  }
+  header nav {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+  header ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    display: inline-block;
+  }
 
-header li {
-  display: inline-block;
-}
+  header li {
+    display: inline-block;
+  }
 
-header li a {
-  display: block;
-  background-color: rgba(11, 18, 34, 0.9);
-  color: #fff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-shadow: 1px 1px 2px black, -1px -1px 2px #444;
-}
+  header li a {
+    display: block;
+    background-color: rgba(11, 18, 34, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px #444;
+    border-radius: 15px;
+  }
 
-header li a:hover {
-  background-color: rgba(56, 254, 158, 0.9);
-}
-.live {
-  color: red;
-}
-.live:hover {
-  color: red;
-}
-footer div {
-  padding: 15px;
-  margin: 30px;
-  list-style-type: none;
-  overflow: hidden;
-  color: rgba(56, 254, 158, 1);
-  display: inline-block;
-  background-color: rgba(11, 18, 34, 0.9);
-}
-#before_footer {
-  background-image: url(../images/ville_bas2.png);
-  background-size: 100% auto;
-  background-position: bottom;
-  background-repeat: no-repeat;
+  header li a:hover {
+    background-color: rgba(42, 170, 121, 0.9);
+    box-shadow: 2px 2px 15px inset rgba(11, 18, 34, 1);
+  }
+  .live {
+    color: red;
+  }
+  .live:hover {
+    color: red;
+  }
+  footer div {
+    padding: 15px;
+    margin: 30px;
+    list-style-type: none;
+    overflow: hidden;
+    color: rgba(42, 170, 121, 1);
+    display: inline-block;
+    background-color: rgba(11, 18, 34, 0.9);
+  }
+  #before_footer {
+    background-image: url(../images/ville_bas2.png);
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
 
-  z-index: 0;
-  width: 100%;
-  height: 400px;
-}
-footer {
-  box-shadow: 5px 5px 0px rgb(22, 22, 22);
-}
+    z-index: 0;
+    width: 100%;
+    height: 400px;
+  }
+  footer {
+    box-shadow: 5px 5px 0px rgb(22, 22, 22);
+  }
 
-/* EQUIPES */
-.equipe {
-  display: inline-block;
-  margin: 1%;
-  overflow: hidden;
-  box-shadow: 5px 5px 0px rgb(22, 22, 22);
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.equipe .equipe_name {
-  background-color: #000;
-  color: #fff;
-  margin: 0px;
-}
-.equipe .equipe_img {
-  width: 100%;
-  height: auto;
-  border-bottom: 2px solid black;
-}
+  /* EQUIPES */
+  .equipe {
+    display: inline-block;
+    margin: 1%;
+    overflow: hidden;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 2px 2px 15px rgba(11, 18, 34, 1);
 
-.equipe .spe {
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  text-align: left;
-  margin-bottom: 10px;
-  position: relative;
-}
-.equipe .spe div {
-  margin: 10px;
-}
+    border-radius: 15px;
+    color: rgba(11, 18, 34, 1);
+  }
+  .equipe i {
+    color: rgba(11, 18, 34, 1);
+  }
+  .equipe .equipe_name {
+    background-color: rgb(11, 18, 34);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(226, 226, 226);
+    margin: 0px;
+  }
+  .equipe .equipe_img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid rgb(11, 18, 34);
+  }
 
-.equipage {
-  padding: 10px;
-  display: inline-block;
-}
+  .equipe .spe {
+    border-bottom: 2px solid rgb(11, 18, 34);
+    border-top: 2px solid rgb(11, 18, 34);
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .equipe .spe div {
+    margin: 10px;
+  }
 
-.badge {
-  border: 5px ridge #e6f2ff;
-  background-color: #e6f2ff;
-  color: black;
-  display: inline-block;
-  margin-bottom: 15px;
-  width: 100%;
-  text-align: left;
-}
-.badge .left {
-  width: 30%;
-}
-.badge .right {
-  width: 70%;
-}
-.badge .image-cropper {
-  overflow: hidden;
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-}
-.badge .flag {
-  height: 28px;
-  width: auto;
-  display: inline-block;
-  margin-right: 10px;
-}
-.badge .pilote_img {
-  height: 100px;
-  width: auto;
-  display: inline;
-}
-.badge p {
-  margin: 0px;
-}
-.badge .pilote_name {
-  display: inline-block;
-  margin: 0px;
-}
-.badge .left {
-  width: 30%;
-}
-.badge .right {
-  width: 70%;
-}
-.p30p {
-  display: inline-block;
-  width: 30%;
-  margin: 1%;
-}
-.p20p {
-  width: 20%;
-  margin: 1%;
-  display: inline-block;
-}
-.p40p {
-  width: 40%;
-  margin: 1%;
-  display: inline-block;
-}
-.sponsor {
-  display: inline-block;
-  width: 20%;
-  height: auto;
-  margin: 1%;
-}
-input,
-textarea {
-  font-family: "nasalization", "atwriter", "VCR", "Postface", Arial, sans-serif;
-  display: inline-block;
-  min-width: 30%;
-  max-width: 30%;
-  padding: 10px;
-  margin: 1%;
-  border: 1px solid rgb(22, 22, 22);
-  background-color: white;
-}
+  .equipage {
+    padding: 10px;
+    display: inline-block;
+  }
 
-button {
-  font-family: "nasalization", "atwriter", "VCR", "Postface", Arial, sans-serif;
-  display: inline-block;
-  width: 30%;
-  padding: 10px;
-  margin: 1%;
-  border: 1px solid rgb(22, 22, 22);
-  background-color: white;
-}
-button:hover {
-  background-color: rgba(56, 254, 158, 1);
-  cursor: pointer;
-}
-.icone_margin {
-  margin-right: 10px;
-}
+  .badge {
+    border: 5px ridge #e6f2ff;
+    background-color: #e6f2ff;
+    color: black;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 95%;
+    text-align: left;
+  }
+  .badge .left {
+    width: 30%;
+  }
+  .badge .right {
+    width: 70%;
+  }
+  .badge .image-cropper {
+    overflow: hidden;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
+  .badge .flag {
+    height: 28px;
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .badge .pilote_img {
+    height: 100px;
+    width: auto;
+    display: inline;
+  }
+  .badge p {
+    margin: 0px;
+  }
+  .badge .pilote_name {
+    display: inline-block;
+    margin: 0px;
+  }
+  .badge .left {
+    width: 30%;
+  }
+  .badge .right {
+    width: 70%;
+  }
+  .p30p {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+  }
+  .p20p {
+    width: 20%;
+    margin: 1%;
+    display: inline-block;
+  }
+  .p40p {
+    width: 40%;
+    margin: 1%;
+    display: inline-block;
+  }
+  .sponsor {
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    margin: 1%;
+  }
+  input,
+  textarea {
+    font-family: "nasalization", "atwriter", "VCR", "Postface", Arial,
+      sans-serif;
+    display: inline-block;
+    min-width: 30%;
+    max-width: 30%;
+    padding: 10px;
+    margin: 1%;
+    border: 1px solid rgb(22, 22, 22);
+    background-color: white;
+  }
 
-/**************
+  button {
+    font-family: "nasalization", "atwriter", "VCR", "Postface", Arial,
+      sans-serif;
+    display: inline-block;
+    width: 30%;
+    padding: 10px;
+    margin: 1%;
+    border: 1px solid rgb(22, 22, 22);
+    background-color: white;
+  }
+  button:hover {
+    background-color: rgba(42, 170, 121, 1);
+    cursor: pointer;
+  }
+  .icone_margin {
+    margin-right: 10px;
+  }
+
+  /**************
 ***STARS RATING
 ***************/
 
-fieldset,
-label {
-  margin: 0;
-  padding: 0;
-}
+  fieldset,
+  label {
+    margin: 0;
+    padding: 0;
+  }
 
-/****** Style Star Rating Widget *****/
+  /****** Style Star Rating Widget *****/
 
-.rating {
-  border: none;
-  width: 220px;
-  position: absolute;
-  top: 50%;
-  margin-top: -15px;
-}
+  .rating {
+    border: none;
+    width: 220px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+  }
 
-.rating > input {
-  display: none;
-}
-.rating > label:before {
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
+  .rating > input {
+    display: none;
+  }
+  .rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+  }
 
-.rating > .half:before {
-  content: "\f089";
-  position: absolute;
-}
+  .rating > .half:before {
+    content: "\f089";
+    position: absolute;
+  }
 
-.rating > label {
-  color: #ddd;
-  float: right;
-}
+  .rating > label {
+    color: #ddd;
+    float: right;
+  }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
+  /***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label, /* show gold star when clicked */
+  .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
 .rating:not(:checked) > label:hover ~ label {
-  color: #ffd700;
-} /* hover previous stars in list */
+    color: #ffd700;
+  } /* hover previous stars in list */
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
+  .rating > input:checked + label:hover, /* hover current star when changing rating */
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label {
-  color: #ffed85;
-}
+    color: #ffed85;
+  }
 
-#podium {
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
-}
-#podium .fill {
-  background-color: rgb(0, 0, 0);
-  border: 0px solid black;
-  padding: 0px;
-  margin: 0px;
-}
-#podium .fill_delimiter {
-  background-image: url(../images/delimiteur.png);
-  background-size: 100% auto;
-  background-position: top;
-  background-repeat: repeat-y;
-  height: 20px;
-}
-#podium tr {
-  border: 0px solid black;
-  padding: 0px;
-  margin: 0px;
-}
+  #podium {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+  }
+  #podium .fill {
+    background-color: rgb(0, 0, 0);
+    border: 0px solid black;
+    padding: 0px;
+    margin: 0px;
+  }
+  #podium .fill_delimiter {
+    background-image: url(../images/delimiteur.png);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: repeat-y;
+    height: 20px;
+  }
+  #podium tr {
+    border: 0px solid black;
+    padding: 0px;
+    margin: 0px;
+    color: rgb(226, 226, 226);
+  }
 
-#ticket_section {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-}
-#ticket {
-  display: inline;
-}
-#ticket .left {
-  min-width: 30%;
-  max-width: 30%;
-  margin: 0px;
-  background-color: rgb(247, 228, 134);
-  border-right: 2px dashed rgb(0, 0, 0);
-}
-#ticket .right {
-  min-width: 70%;
-  max-width: 70%;
-  margin: 0px;
-  background-color: rgb(247, 228, 134);
-  text-align: right;
-}
+  #ticket_section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  #ticket {
+    display: inline;
+  }
+  #ticket .left {
+    min-width: 30%;
+    max-width: 30%;
+    margin: 0px;
+    background-color: rgb(247, 228, 134);
+    border-right: 2px dashed rgb(0, 0, 0);
+  }
+  #ticket .right {
+    min-width: 70%;
+    max-width: 70%;
+    margin: 0px;
+    background-color: rgb(247, 228, 134);
+    text-align: right;
+  }
 
-#ticket p {
-  margin: 10px;
-  padding: 0px;
-  color: rgb(0, 0, 0);
+  #ticket p {
+    margin: 10px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+  }
+  #ticket #name {
+    background-color: #000;
+    color: rgb(247, 228, 134);
+    padding-right: 30px;
+  }
+  #ticket #ticket_number {
+    background-color: #000;
+    color: rgb(247, 228, 134);
+    padding-right: 30px;
+  }
 }
-#ticket #name {
-  background-color: #000;
-  color: rgb(247, 228, 134);
-  padding-right: 30px;
-}
-#ticket #ticket_number {
-  background-color: #000;
-  color: rgb(247, 228, 134);
-  padding-right: 30px;
+@media all and (max-device-width: 480px) {
+  section {
+    width: 95%;
+    margin: 0px;
+    font-size: xx-large;
+    margin-top: 15px;
+  }
+  header li {
+    width: 80%;
+    margin-top: 10px;
+    font-size: xx-large;
+  }
+  footer div {
+    font-size: xx-large;
+  }
 }

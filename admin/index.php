@@ -34,7 +34,7 @@ END;
         }
       }
     }else{
-      header("Location: menu.php");
+      header("Location: add-team.php");
     }
     ?>
       <form action="index.php" method="post">

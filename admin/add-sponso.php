@@ -13,26 +13,34 @@ if (!isset($_SESSION["connect"])) {
         if(isset($_POST["name"]) && $_POST["name"]!="" &&
            isset($_POST["link"]) && $_POST["link"]!="" &&
            isset($_POST["importance"]) &&
-           $_FILES["img"]["error"] == 0 && (pathinfo($_FILES["img"]["name"])['extension']=="PNG" || pathinfo($_FILES["img"]["name"])['extension']=="png")){
-            $name = addslashes($_POST["name"]);
-            $link = addslashes($_POST["link"]);
-            $importance = $_POST["importance"];
-            $query = mysqli_query($connect,"INSERT INTO sponso (name,link,importance) VALUES ('$name','$link',$importance)");
-            $id = mysqli_insert_id($connect);
-            $url = "../ressources/sponso/sponso$id.png";
-            $tmp_name = $_FILES["img"]["tmp_name"];
-            move_uploaded_file($tmp_name, $url);
-            echo <<<END
-            <div class="green_alert alert">
-                <p>Le sponsor a été ajouté</p>
-            </div>
-END;
+           $_FILES["img"]["error"] == 0 ){
+            $ext = pathinfo($_FILES["img"]["name"]);
+            if($ext["extension"]=="png"||$ext["extension"]=="PNG"){
+              $name = addslashes($_POST["name"]);
+              $link = addslashes($_POST["link"]);
+              $importance = $_POST["importance"];
+              $query = mysqli_query($connect,"INSERT INTO sponso (name,link,importance) VALUES ('$name','$link',$importance)");
+              echo "INSERT INTO sponso (name,link,importance) VALUES ('$name','$link',$importance)";
+              $id = mysqli_insert_id($connect);
+              $url = "../ressources/sponso/sponso$id.png";
+              $tmp_name = $_FILES["img"]["tmp_name"];
+              move_uploaded_file($tmp_name, $url);
+              echo "
+              <div class='green_alert alert'>
+                  <p>Le sponsor a été ajouté</p>
+              </div>";
+            }else{
+              echo "
+              <div class='green_alert alert'>
+                  <p>Erreur : l'image n'est pas au bon format (PNG)</p>
+              </div>";
+            }
+            
         }else{
-          echo <<<END
-            <div class="red_alert alert">
-                <p>Il manque des informations</p>
-            </div>
-END;
+          echo "
+              <div class='green_alert alert'>
+                  <p>Erreur : il manque des informations.</p>
+              </div>";
         }
       }
     

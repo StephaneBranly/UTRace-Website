@@ -19,14 +19,14 @@
         include_once("./admin/inc/sqlConnect.php"); 
         $query = mysqli_query($connect,"SELECT * FROM team");
         while($row = mysqli_fetch_array($query)){
-            $query2 = mysqli_query($connect,"SELECT AVG(vote.value) FROM vote,voter WHERE voter.id=vote.idVoter AND vote.idTeam=$row[0] AND voter.active=true");
+            $query2 = mysqli_query($connect,"SELECT AVG(vote.value) FROM vote,voter WHERE voter.id=vote.idVoter AND vote.idTeam=$row[id] AND voter.active=true");
             $result = mysqli_fetch_array($query2);
             $arrondi = round($result[0] * 2) / 2;
             echo"
         <div class='equipe p40p'>
             <h1 class='equipe_name'>$row[1]</h1>
-            <img class='equipe_img' src='ressources/team/team$row[0].png' alt='Image de l equipe $row[1]'/>
-            <p>$row[2]</p>
+            <img class='equipe_img' src='ressources/team/team$row[id].png' alt='Image de l equipe $row[name]'/>
+            <p>$row[description]</p>
             <div class='spe'>
                 <div class='note'>
                 <i class='icone icon-eye icone_margin'>&#xe826;</i>Esthétique :";
@@ -47,18 +47,18 @@
                 echo"</div>
                 <div class='cote'><i class='icone icon-chart-line icone_margin'>&#xf201;</i>Cote : 1.03</div>
             </div>
-            <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div>
+            <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div><br/>
 
             <table class='equipage'>
                 <tr class='pilote'>
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot1_$row[0].png' alt='Image du piote $row[3]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot1_$row[id].png' alt='Image du piote $row[pilot1_name]'/></div>
                             </td>
                             <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[3]</h1>
-                                <p>$row[4]<p>
+                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[pilot1_name]</h1>
+                                <p>$row[pilot1_description]<p>
                             </td>
                         </tr>
                     </table>
@@ -67,11 +67,11 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot2_$row[0].png' alt='Image du piote $row[5]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot2_$row[id].png' alt='Image du piote $row[pilot2_name]'/></div>
                             </td>
                             <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[5]</h1>
-                                <p>$row[6]<p>
+                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[pilot2_name]</h1>
+                                <p>$row[pilot2_description]<p>
                             </td>
                         </tr>
                     </table>
@@ -80,11 +80,11 @@
                     <table class='badge'>
                         <tr>
                             <td class='left'>  
-                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot3_$row[0].png' alt='Image du piote $row[7]'/></div>
+                                <div class='image-cropper'><img class='pilote_img' src='ressources/team/pilot3_$row[id].png' alt='Image du piote $row[pilot3_name]'/></div>
                             </td>
                             <td class='right'>
-                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[7]</h1>
-                                <p>$row[8]<p>
+                                <img class='flag' src='./ressources/images/flags-normal/fr.png' alt='nationalite pilote'/><h1 class='pilote_name'>$row[pilot3_name]</h1>
+                                <p>$row[pilot3_description]<p>
                             </td>
                         </tr>
                     </table>

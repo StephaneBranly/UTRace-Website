@@ -15,7 +15,7 @@ if (!isset($_SESSION["connect"])) {
                 unlink("../ressources/sponso/sponso$id.png") or die("Couldn't delete file");
                 echo <<<END
             <div class="green_alert alert">
-                <p>La tierlist a été Suprimé</p>
+                <p>Le sponsor a correctement été supprimé</p>
             </div>
 END;
             }
