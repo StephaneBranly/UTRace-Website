@@ -37,7 +37,7 @@
           <a href="#"><li>Voir les votes</li></a>
 
           <li class="title">Tiercé</li>
-          <a href="#"><li>Valider un ticket</li></a>
+          <a href="load-ticket.php"><li>Valider un ticket</li></a>
           <li class="title">Autre</li>
           
           <a href="log-out.php"><li>Se deconnecter</li></a>
