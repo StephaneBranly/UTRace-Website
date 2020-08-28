@@ -13,7 +13,13 @@
 	</head>
 	<body>
         <?php include_once("./elements/header.php"); ?>
-        
+        <?php 
+            include_once("./admin/inc/sqlConnect.php"); 
+            $options_select = "";
+            $query = mysqli_query($connect,"SELECT * FROM team ORDER BY `id` ASC");
+            while($row = mysqli_fetch_array($query))
+                $options_select .= "<option value='$row[id]'>$row[name]</option>";
+        ?>
         <section>
             <div class='content_section'>
                 <h1 class="section_name" id="contenu">Tiercé, explications du parie</h1>
@@ -34,36 +40,33 @@
                 </p>
             </div>
         </section>
-
+    
         <section>
             <div class='content_section'>
                 <h1 class="section_name">Mon parie, mon tiercé</h1> 
-                <form>
+                <form method='post' action='ticket'>
                     <p>
                     <table cellspacing="0" cellpadding="0" id='podium'>
                         <tr><td></td><td></td><td></td></tr>
                         <tr><td></td><td></td><td></td></tr>
                         <tr><td></td><td class='fill'><select name='first'>
-                            <option>Les barjos (equipe 1 - cote: 1,03)</option>
-                            <option>Les bgs (equipe 2 - cote: 1,03)</option>
+                            <?php echo $options_select; ?>
                         <select></td><td></td></tr>
                         <tr><td class='fill'><select name='second'>
-                        <option>Equipe 1 - Les barjos (cote: 1,03)</option>
-                            <option>Equipe 2 - Les bgs (cote: 1,03)</option>
+                            <?php echo $options_select; ?>
                         <select></td><td class='fill'>1</td><td></td></tr>
                         <tr><td class='fill'>2</td><td class='fill'></td><td class='fill'><select name='third'>
-                        <option>Equipe 1 - Les barjos (cote: 1,03)</option>
-                            <option>Equipe 2 - Les bgs (cote: 1,03)</option>
+                            <?php echo $options_select; ?>
                         <select></td></tr>
                         <tr><td class='fill'></td><td class='fill'></td><td class='fill'>3</td></tr>
                         <tr><td class='fill_delimiter'></td><td class='fill_delimiter'></td><td class='fill_delimiter'></td></tr>
                     </table></p>
-                    <p><label>Email : </label><br/><input type='text'/><br/>
-                    <label>Nom : </label><br/><input type='text'/><br/>
-                    <label>Prénom : </label><br/><input type='text'/><br/>
-                    <label>Numéro de téléphone : </label><br/><input type='text'/></p>
-                    <p><label>Je suis d'accord sur la sélection et distribution des gagnants des lots</label><br/><input type='checkbox'/></p>
-                    <button type='submit'>Générer mon ticket</button>
+                    <p><label>Email : </label><br/><input name='mail' required type='email'/><br/>
+                    <label>Nom : </label><br/><input name='surname' required type='text'/><br/>
+                    <label>Prénom : </label><br/><input name='name' required type='text'/><br/>
+                    <label>Numéro de téléphone : </label><br/><input name='phone' required type='text'/></p>
+                    <p><label>Je suis d'accord sur la sélection et distribution des gagnants des lots : <input required type='checkbox'/></label></p>
+                    <button type='submit' name='submit'>Générer mon ticket</button>
                 </form>
             </div>
         </section>

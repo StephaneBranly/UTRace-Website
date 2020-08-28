@@ -62,10 +62,11 @@
     width: 70%;
     padding: 0px;
     overflow: hidden;
-    background-image: url(../images/delimiteur.png);
+    /*background-image: url(../images/delimiteur.png);
     background-size: 100% auto;
     background-position: top;
-    background-repeat: repeat-y;
+    background-repeat: repeat-y;*/
+    background-color: rgba(0, 0, 0, 0);
     height: auto;
     border-radius: 15px;
     box-shadow: 2px 2px 15px rgba(11, 18, 34, 1);
@@ -412,7 +413,10 @@
     width: 100%;
   }
   #ticket {
-    display: inline;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgb(92, 84, 46);
   }
   #ticket .left {
     min-width: 30%;
@@ -438,11 +442,15 @@
     background-color: #000;
     color: rgb(247, 228, 134);
     padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   #ticket #ticket_number {
     background-color: #000;
     color: rgb(247, 228, 134);
     padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 @media all and (max-device-width: 480px) {
