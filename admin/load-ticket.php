@@ -54,6 +54,11 @@ if (!isset($_SESSION["connect"])) {
                         </div>
                     </div>
                 </section>";
+                echo "
+                <form method='post' action='validate-ticket.php'>
+                    <td><input type='hidden' value='$id' name='id' placeholder='id du ticket'/></td>
+                    <input type='submit' name='submit' value='Valider ce ticket'>
+                </form>";
             }
             else
                 echo "<div class='alert red_alert'>
