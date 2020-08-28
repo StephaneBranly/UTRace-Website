@@ -12,14 +12,14 @@ include("inc/header.php");
         if(isset($_POST["identifiant"])&&$_POST["identifiant"]!="" && isset($_POST["pass"])&&$_POST["pass"]!=""){
         $id = addslashes($_POST["identifiant"]);
         $pass = addslashes($_POST["pass"]);
-        if($id=="StephCeBG"&&$pass=="OUIouNON"){
+        if($id=="admin"&&$pass=="admin"){
           $_SESSION["connect"]="ok";
           header("Location: add-team.php");
           
         }else{
           echo <<<END
           <div class="alert red_alert">
-            <p>Pas bon ! Try again comme disent les jeunes !</p>
+            <p>Code incorrect !</p>
           </div>
 
 END;
@@ -27,7 +27,7 @@ END;
         }else{
           echo <<<END
           <div class="alert red_alert">
-            <p>Il faut renseigner l'identifiant ET le mot de passe ! bébète !</p>
+            <p>Il faut renseigner l'identifiant ET le mot de passe !</p>
           </div>
 
 END;
