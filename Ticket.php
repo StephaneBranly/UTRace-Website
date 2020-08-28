@@ -14,7 +14,9 @@
 	<body>
         <?php include_once("./elements/header.php"); ?>
 
-        <?php 
+        <?php
+            include_once("./admin/inc/sqlConnect.php"); 
+
             if(isset($_POST["submit"])){
                 if(isset($_POST["mail"])&&$_POST["mail"]!=""&&
                 isset($_POST["name"])&&$_POST["name"]!=""&&
@@ -27,9 +29,35 @@
                     $surname = addslashes($_POST["surname"]);
                     $mail = addslashes($_POST["mail"]);
                     $phone = addslashes($_POST["phone"]);
-                    $first = addslashes($_POST["first"]);
-                    $second = addslashes($_POST["second"]);
-                    $third = addslashes($_POST["third"]);
+                    $first = intval($_POST["first"]);
+                    $second = intval($_POST["second"]);
+                    $third = intval($_POST["third"]);
+                    $now = date('Y-m-d H:i:s');
+                    $query = mysqli_query($connect,"
+                    INSERT INTO `utrace`.`ticket` (
+                        `id` ,
+                        `creation_date` ,
+                        `mail` ,
+                        `name` ,
+                        `surname` ,
+                        `phone` ,
+                        `first` ,
+                        `second` ,
+                        `third` ,
+                        `validated`
+                        )
+                        VALUES (
+                        NULL , '$now' , '$mail', '$name', '$surname', '$phone', '$first', '$second', '$third', '0'
+                        );
+                    ");
+                    $id=mysqli_insert_id($connect);
+
+                    $query = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$first");
+                    $first_name = mysqli_fetch_array($query);
+                    $query = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$second");
+                    $second_name = mysqli_fetch_array($query);
+                    $query = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$third");
+                    $third_name = mysqli_fetch_array($query);
                     echo "<section>
                             <div class='content_section'>
                                 <h1 class='section_name'>Ticket tiercé généré</h1> 
@@ -38,7 +66,7 @@
                                     <table cellspacing='0' cellpadding='0' id='ticket'>
                                         <tr>
                                             <td class='left' id='ticket_number'>
-                                                Ticket #00026
+                                                Ticket #$id
                                             </td>
                                             <td class='right' id='name'>
                                             $name $surname
@@ -52,9 +80,9 @@
                                                 <p id='tel'>Téléphone : $phone</p>
                                                 <p id='email'>Mail : $mail</p>
                                                 <p id='classement'>
-                                                    1er - Les barjos (equipe $first)<br/>
-                                                    2eme - Les bgs (equipe $second)<br/>
-                                                    3eme - Les tarés (equipe $third)
+                                                    <b>1er - $first_name[0]</b><br/>
+                                                    2eme - $second_name[0]<br/>
+                                                    3eme - $third_name[0]
                                                 </p>
                                             </td>
                                         </tr>
