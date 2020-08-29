@@ -8,79 +8,83 @@ if (!isset($_SESSION["connect"])) {
     ?>
     <div class="container form">
         <h1>Voir les gagnants du tiercé :</h1>
+        
         <?php 
-            $options_select = "";
-            $nbr_team=0;
-            $query = mysqli_query($connect,"SELECT * FROM team ORDER BY `id` ASC");
-            while($row = mysqli_fetch_array($query))
-            {
-                $options_select .= "<option value='$row[id]'>$row[name]</option>";
-                $nbr_team++;
-            }
+            $query = mysqli_query($connect,"SELECT * FROM vars WHERE `var`='finished'");
+            $row = mysqli_fetch_array($query);
+            if($row['value'])
+            echo "<div class='alert green_alert'>
+            <p>Course terminée</p>
+            </div>";
+            else
+            echo "<div class='alert red_alert'>
+            <p>Course non déclarée comme terminée</p>
+            </div>";
 
             $query = mysqli_query($connect, "SELECT * FROM ticket WHERE validated=1");
             while($row = mysqli_fetch_array($query))
             {
-                $position
-                $error = 3*1;
+                $query_first = mysqli_query($connect, "SELECT * FROM team WHERE `id`=$row[first]");
+                $row_first = mysqli_fetch_array($query_first);
+                $position_first=$row_first['place'];
+
+                $query_second = mysqli_query($connect, "SELECT * FROM team WHERE `id`=$row[second]");
+                $row_second = mysqli_fetch_array($query_second);
+                $position_second=$row_second['place'];
+
+                $query_third = mysqli_query($connect, "SELECT * FROM team WHERE `id`=$row[third]");
+                $row_third = mysqli_fetch_array($query_third);
+                $position_third=$row_third['place'];
+                $error = 3.*abs(1.-$position_first) + 2.*abs(2.-$position_second) + 1.*abs(3.-$position_third);
+                
+                $query_third = mysqli_query($connect, "UPDATE `ticket` SET `error`=$error WHERE `id`=$row[id]");
+
                 // 3*|1-position_arrivée(premier)| + 2*|2-position_arrivée(deuxieme)| + 1*|3-position_arrivée(troisieme)| 
             }
-                if($row!=null){
-                echo "
-            <div class='green_alert alert'>
-                <p>Ticket chargé</p>
-            </div>";
-            if($row['validated']==1)
-            echo "
-            <div class='yellow_alert alert'>
-                <p>Ticket déjà validé !</p>
-            </div>";
-            $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[first]");
-            $first_name = mysqli_fetch_array($query2);
-            $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[second]");
-            $second_name = mysqli_fetch_array($query2);
-            $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[third]");
-            $third_name = mysqli_fetch_array($query2);
-            echo "<section>
-                    <div class='content_section'>
-                        <div id='ticket_section'>
-                            <table cellspacing='0' cellpadding='0' id='ticket'>
-                                <tr>
-                                    <td class='left' id='ticket_number'>
-                                        Ticket #$row[id]
-                                    </td>
-                                    <td class='right' id='name'>
-                                    $row[name] $row[surname]
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class='left'>
-                                        <p>Ticket à valider<br/>au stand</p>
-                                    </td>
-                                    <td class='right'>
-                                        <p id='tel'>Téléphone : $row[phone]</p>
-                                        <p id='email'>Mail : $row[mail]</p>
-                                        <p id='classement'>
-                                            <b>1er - $first_name[0]</b><br/>
-                                            2eme - $second_name[0]<br/>
-                                            3eme - $third_name[0]
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
+         
+            $query = mysqli_query($connect,"SELECT * FROM ticket WHERE `validated`=1 ORDER BY `error` ASC");
+            $index=1;
+            while($row = mysqli_fetch_array($query))
+            {
+                $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[first]");
+                $first_name = mysqli_fetch_array($query2);
+                $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[second]");
+                $second_name = mysqli_fetch_array($query2);
+                $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[third]");
+                $third_name = mysqli_fetch_array($query2);
+                echo "<section>
+                        <div class='content_section'>
+                            <div id='ticket_section'>
+                                <table cellspacing='0' cellpadding='0' id='ticket'>
+                                    <tr>
+                                        <td class='left' id='ticket_number'>
+                                            Ticket #$row[id]
+                                        </td>
+                                        <td class='right' id='name'>
+                                        $row[name] $row[surname]
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class='left'>
+                                            <p>error=$row[error]</p>
+                                            <p>classement=$index</p>
+                                        </td>
+                                        <td class='right'>
+                                            <p id='tel'>Téléphone : $row[phone]</p>
+                                            <p id='email'>Mail : $row[mail]</p>
+                                            <p id='classement'>
+                                                <b>1er - $first_name[0]</b><br/>
+                                                2eme - $second_name[0]<br/>
+                                                3eme - $third_name[0]
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
-                    </div>
-                </section>";
-                echo "
-                <form method='post' action='validate-ticket.php'>
-                    <td><input type='hidden' value='$id' name='id' placeholder='id du ticket'/></td>
-                    <input type='submit' name='submit' value='Valider ce ticket'>
-                </form>";
+                    </section>";
+                    $index++;
             }
-            else
-                echo "<div class='alert red_alert'>
-                <p>Ticket introuvable</p>
-              </div>";
         }
             ?>
         <div class="bar"></div>
@@ -89,4 +93,3 @@ if (!isset($_SESSION["connect"])) {
     </body>
 
     </html>
-<?php } ?>
