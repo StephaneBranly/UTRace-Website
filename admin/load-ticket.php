@@ -18,6 +18,11 @@ if (!isset($_SESSION["connect"])) {
             <div class='green_alert alert'>
                 <p>Ticket chargé</p>
             </div>";
+            if($row['validated']==1)
+            echo "
+            <div class='yellow_alert alert'>
+                <p>Ticket déjà validé !</p>
+            </div>";
             $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[first]");
             $first_name = mysqli_fetch_array($query2);
             $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[second]");
