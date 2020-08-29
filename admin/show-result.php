@@ -42,7 +42,7 @@ if (!isset($_SESSION["connect"])) {
                 // 3*|1-position_arrivée(premier)| + 2*|2-position_arrivée(deuxieme)| + 1*|3-position_arrivée(troisieme)| 
             }
          
-            $query = mysqli_query($connect,"SELECT * FROM ticket WHERE `validated`=1 ORDER BY `error` ASC");
+            $query = mysqli_query($connect,"SELECT * FROM ticket WHERE `validated`=1 ORDER BY `error` ASC LIMIT 200");
             $index=1;
             while($row = mysqli_fetch_array($query))
             {
