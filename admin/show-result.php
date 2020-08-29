@@ -7,12 +7,24 @@ if (!isset($_SESSION["connect"])) {
     include("inc/sqlConnect.php");
     ?>
     <div class="container form">
-        <h1>Charger un ticket</h1>
-        <?php if (isset($_POST["submit"])) {
+        <h1>Voir les gagnants du tiercé :</h1>
+        <?php 
+            $options_select = "";
+            $nbr_team=0;
+            $query = mysqli_query($connect,"SELECT * FROM team ORDER BY `id` ASC");
+            while($row = mysqli_fetch_array($query))
+            {
+                $options_select .= "<option value='$row[id]'>$row[name]</option>";
+                $nbr_team++;
+            }
 
-                $id = $_POST['id'];
-                $query = mysqli_query($connect, "SELECT * FROM ticket WHERE id=$id");
-                $row = mysqli_fetch_array($query);
+            $query = mysqli_query($connect, "SELECT * FROM ticket WHERE validated=1");
+            while($row = mysqli_fetch_array($query))
+            {
+                $position
+                $error = 3*1;
+                // 3*|1-position_arrivée(premier)| + 2*|2-position_arrivée(deuxieme)| + 1*|3-position_arrivée(troisieme)| 
+            }
                 if($row!=null){
                 echo "
             <div class='green_alert alert'>
@@ -59,13 +71,6 @@ if (!isset($_SESSION["connect"])) {
                         </div>
                     </div>
                 </section>";
-                $query = mysqli_query($connect,"SELECT * FROM vars WHERE `var`='finished'");
-                $row = mysqli_fetch_array($query);
-                if($row['value'])
-                echo "<div class='alert red_alert'>
-                <p>La course est déclarée comme finie, impossible de valider ce ticket</p>
-                 </div>";
-                else
                 echo "
                 <form method='post' action='validate-ticket.php'>
                     <td><input type='hidden' value='$id' name='id' placeholder='id du ticket'/></td>
@@ -78,16 +83,8 @@ if (!isset($_SESSION["connect"])) {
               </div>";
         }
             ?>
-        <div class='bar'></div>
-        <form method='post' action='load-ticket.php'>
-            <table>
-                <tr>
-                    <td><label for='sponso'>Ticket :</label></td>
-                    <td><input type='text' name='id' required placeholder='id du ticket'/></td>
-                </tr>
-            </table>
-            <input type='submit' name='submit' value='Charger'>
-        </form>
+        <div class="bar"></div>
+        
     </div>
     </body>
 
