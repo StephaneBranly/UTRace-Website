@@ -18,6 +18,11 @@ if (!isset($_SESSION["connect"])) {
             <div class='green_alert alert'>
                 <p>Ticket chargé</p>
             </div>";
+            if($row['validated']==1)
+            echo "
+            <div class='yellow_alert alert'>
+                <p>Ticket déjà validé !</p>
+            </div>";
             $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[first]");
             $first_name = mysqli_fetch_array($query2);
             $query2 = mysqli_query($connect,"SELECT `name` FROM team WHERE `id`=$row[second]");
@@ -54,6 +59,13 @@ if (!isset($_SESSION["connect"])) {
                         </div>
                     </div>
                 </section>";
+                $query = mysqli_query($connect,"SELECT * FROM vars WHERE `var`='finished'");
+                $row = mysqli_fetch_array($query);
+                if($row['value'])
+                echo "<div class='alert red_alert'>
+                <p>La course est déclarée comme finie, impossible de valider ce ticket</p>
+                 </div>";
+                else
                 echo "
                 <form method='post' action='validate-ticket.php'>
                     <td><input type='hidden' value='$id' name='id' placeholder='id du ticket'/></td>
@@ -66,15 +78,15 @@ if (!isset($_SESSION["connect"])) {
               </div>";
         }
             ?>
-        <div class="bar"></div>
-        <form method="post" action="load-ticket.php">
+        <div class='bar'></div>
+        <form method='post' action='load-ticket.php'>
             <table>
                 <tr>
-                    <td><label for="sponso">Ticket :</label></td>
+                    <td><label for='sponso'>Ticket :</label></td>
                     <td><input type='text' name='id' required placeholder='id du ticket'/></td>
                 </tr>
             </table>
-            <input type="submit" name="submit" value="Charger">
+            <input type='submit' name='submit' value='Charger'>
         </form>
     </div>
     </body>
