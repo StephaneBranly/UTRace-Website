@@ -38,8 +38,12 @@
 
           <li class="title">Tiercé</li>
           <a href="load-ticket.php"><li>Valider un ticket</li></a>
-          <li class="title">Autre</li>
-          
+          <a href="show-result.php"><li>Voir les gagnants</li></a>
+
+          <li class='title'>Course</li>
+          <a href="declare-winners.php"><li>Déclarer les gagnants</li></a>
+
+          <li class='title'>Compte</li>
           <a href="log-out.php"><li>Se deconnecter</li></a>
 
 
