@@ -23,11 +23,14 @@ if (!isset($_SESSION["connect"])) {
             </div>";
             if(isset($_POST["finished"]))
             {
+                $query2 = mysqli_query($connect,"UPDATE `vars` SET `value`=1 WHERE `var`='finished'");
             echo "
             <div class='yellow_alert alert'>
                 <p>Course déclarée comme terminée !</p>
             </div>";
             }
+            else
+            $query2 = mysqli_query($connect,"UPDATE `vars` SET `value`=0 WHERE `var`='finished'");
          
         }
             ?>
@@ -47,7 +50,16 @@ if (!isset($_SESSION["connect"])) {
             <table>
                 <tr>
                     <td><label for="finished">Course terminée ? :</label></td>
-                    <td><input type='checkbox' name='finished'/></td>
+                    <?php
+                        $query = mysqli_query($connect,"SELECT * FROM vars WHERE `var`='finished'");
+                        $row = mysqli_fetch_array($query);
+                        if($row['value'])
+                            $check="checked";
+                        else
+                            $check="";
+                    
+                    echo "<td><input type='checkbox' $check name='finished'/></td>";
+                    ?>
                 </tr>
             </table>
             <input type="submit" name="submit" value="Mettre à jour">
