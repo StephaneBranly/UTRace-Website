@@ -14,7 +14,7 @@ include("inc/header.php");
         $pass = addslashes($_POST["pass"]);
         if($id=="admin"&&$pass=="admin"){
           $_SESSION["connect"]="ok";
-          header("Location: add-team.php");
+          header("Location: load-ticket.php");
           
         }else{
           echo <<<END

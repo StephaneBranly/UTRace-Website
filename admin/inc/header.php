@@ -22,8 +22,7 @@
 
         <ul id="menu">
           <li class="title">Header</li>
-          <a href="act-link.php"><li>Activer lien</li></a>
-          <a href="des-link.php"><li>Désactiver lien</li></a>
+          <a href="update-links.php"><li>MAJ liens</li></a>
 
           <li class="title">Teams</li>
           <a href="add-team.php"><li>Ajouter</li></a>
