@@ -9,6 +9,7 @@ if (!isset($_SESSION["connect"])) {
     <div class="container form">
         <h1>Validation du ticket</h1>
         <?php if (isset($_POST["submit"])) {
+             
 
                 $id = $_POST['id'];
                 $query = mysqli_query($connect, "UPDATE `ticket` SET `validated`=1 WHERE id=$id");
@@ -17,6 +18,8 @@ if (!isset($_SESSION["connect"])) {
             <div class='green_alert alert'>
                 <p>Ticket $id validé</p>
             </div>";
+            include("../update_popularity.php");
+             update_popularity();
         }
             ?>
         <div class="bar"></div>

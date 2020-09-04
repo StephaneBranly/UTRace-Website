@@ -22,6 +22,7 @@
             $query2 = mysqli_query($connect,"SELECT AVG(vote.value) FROM vote,voter WHERE voter.id=vote.idVoter AND vote.idTeam=$row[id] AND voter.active=true");
             $result = mysqli_fetch_array($query2);
             $arrondi = round($result[0] * 2) / 2;
+        $popularity=number_format($row['popularity'], 2, ',', ' ');
             echo"
         <div class='equipe p40p'>
             <h1 class='equipe_name'>$row[1]</h1>
@@ -45,7 +46,7 @@
                 }
                     
                 echo"</div>
-                <div class='cote'><i class='icone icon-chart-line icone_margin'>&#xf201;</i>Cote : 1.03</div>
+                <div class='cote'><i class='icone icon-chart-line icone_margin'>&#xf201;</i>Popularité : $popularity</div>
             </div>
             <div class='pilotes'><i class='icone icon-users-2 icone_margin'>&#xe8be;</i>Les pilotes :</div><br/>
 

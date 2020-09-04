@@ -5,6 +5,7 @@ if (!isset($_SESSION["connect"])) {
 } else {
     include("inc/header.php");
     include("inc/sqlConnect.php");
+   
     ?>
     <div class="container form">
         <h1>Charger un ticket</h1>
